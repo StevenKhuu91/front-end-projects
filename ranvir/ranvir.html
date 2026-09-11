@@ -1,0 +1,1544 @@
+<script type="text/javascript">
+
+    /*-- TOOLTIPS --*/
+    var tooltip = document.querySelectorAll('.tooltip');
+
+    document.addEventListener('mousemove', ttp, false);
+
+    function ttp(e) {
+        for (var i = tooltip.length; i--;) {
+            tooltip[i].style.left = e.pageX + 10 + 'px';
+            tooltip[i].style.top = e.pageY + 60 + 'px';
+        }
+    }
+
+    /*-- MUSIC PLAYER --*/
+    var myAudio = document.getElementById("audio");
+    var isPlaying = false;
+
+    function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play(), myAudio.volume = 0.5;
+    };
+
+    myAudio.onplaying = function () {
+        isPlaying = true;
+    };
+
+    myAudio.onpause = function () {
+        isPlaying = false;
+    };
+
+</script>
+
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gelasio&family=Merriweather:ital@1&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+    @font-face {
+        font-family: 'ink';
+        src: url('https://dl.dropboxusercontent.com/s/2lvtd1mgqj1du4z/iNked%20God.ttf');
+    }
+
+    @font-face {
+        font-family: 'collection';
+        src: url('https://dl.dropboxusercontent.com/s/l6injvc83ibw8cq/CollectionNewStyle.otf');
+    }
+
+    @font-face {
+        font-family: 'masterpiece';
+        src: url('https://dl.dropboxusercontent.com/s/4x98j9gmnhtrg9l/spqr.ttf');
+    }
+
+    body {
+        background: linear-gradient(to right, #60336c, #131313);
+        cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+        user-select: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ff6531;
+        text-shadow: 1px 0px 0px #ffffff;
+        font-weight: 400;
+        cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: #8229e1;
+            text-shadow: 1px 0px 0px #ff6531;
+            cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+        }
+    }
+
+    ::selection {
+        background: transparent;
+        color: rgba(366, 366, 366, .5);
+    }
+
+    ::-moz-selection {
+        background: transparent;
+        color: rgba(366, 366, 366, .5);
+    }
+
+    ::-webkit-scrollbar {
+        height: 0px;
+        width: 0px;
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+
+    .background {
+        position: fixed;
+        margin: auto;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background-image: url('https://i.imgur.com/SqcTKq8.jpg');
+        background-repeat: repeat;
+        background-size: cover;
+        filter: grayscale(1) brightness(.25);
+        opacity: .5;
+    }
+
+    .scrollArrows {
+        position: fixed;
+        margin: auto;
+        top: -800;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 70px;
+        height: 10px;
+        font-weight: lighter;
+        font-size: 10px;
+        font-variant: small-caps;
+        text-align: center;
+        color: #ebe2f1;
+    }
+
+    #container {
+        position: fixed;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1110px;
+        width: 775px;
+        padding-right: 5px;
+        transform: rotate(-90deg);
+        background: linear-gradient(45deg, #1a1a1a, #261e18);
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 1px solid #131313;
+        scroll-snap-type: y mandatory;
+    }
+
+    .length {
+        margin-top: 1585px;
+        margin-left: -978px;
+        display: block;
+        float: left;
+        height: 1200px;
+        width: 3150px;
+        background-image: url('https://i.imgur.com/7Sfp6s2.png');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 3155px;
+        transform: rotate(90deg);
+        opacity: .6;
+    }
+
+    .stats {
+        scroll-snap-align: start none;
+        display: block;
+        float: inline-end;
+        margin-top: -2784px;
+        margin-left: 0px;
+        height: 1109px;
+        width: 775px;
+        filter: opacity(1);
+        overflow: hidden;
+        transition: .9s linear;
+    }
+
+    .journey {
+        scroll-snap-align: start none;
+        display: block;
+        float: inline-end;
+        margin-top: -564;
+        margin-left: 0px;
+        height: 1109px;
+        width: 775px;
+        position: relative;
+        filter: opacity(1);
+        overflow: hidden;
+    }
+
+    .skills {
+        scroll-snap-align: start none;
+        display: block;
+        float: inline-end;
+        margin-top: -1674px;
+        margin-left: 0px;
+        height: 1109px;
+        width: 775px;
+        filter: opacity(1);
+        overflow: hidden;
+    }
+
+    .ooc {
+        scroll-snap-align: start none;
+        display: block;
+        margin-top: 3331px;
+        margin-left: 0px;
+        height: 1109px;
+        width: 775px;
+        filter: opacity(1);
+    }
+
+    .inner-con {
+        float: left;
+        margin-top: 170px;
+        margin-left: -165px;
+        height: 770px;
+        width: 1110px;
+        transform: rotate(90deg);
+    }
+
+    .render1 {
+        float: left;
+        display: block;
+        height: 780px;
+        width: 450px;
+        pointer-events: none;
+        background-image: url('https://i.imgur.com/ithINCG.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+    }
+
+    .name {
+        float: left;
+        display: block;
+        margin-top: 45px;
+        margin-left: -56px;
+        height: 150px;
+        width: 670px;
+        text-align: left;
+        line-height: 150px;
+        font-family: 'masterpiece';
+        letter-spacing: -5px;
+        font-size: 90px;
+        color: transparent;
+        background: linear-gradient(to bottom, #ff6531, #513c81 82%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(4px 4px 1px #251c17);
+    }
+
+    .insignia {
+        float: left;
+        display: block;
+        margin-top: -115px;
+        margin-left: 227px;
+        height: 100px;
+        width: 100px;
+        background-image: url('https://i.imgur.com/xlGUvuo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        filter: drop-shadow(4px 4px 1px #251c17);
+    }
+
+    .subtitle {
+        float: left;
+        display: block;
+        margin-top: -90px;
+        margin-left: -56px;
+        height: 35px;
+        width: 575px;
+        line-height: 35px;
+        background: radial-gradient(#ff6531 -52%, transparent 40%);
+        text-align: center;
+        border-top: 1px solid #251c17;
+        border-bottom: 1px solid #251c17;
+        font-family: 'collection';
+        font-size: 75px;
+        color: #ebe2f1;
+        filter: drop-shadow(4px 4px 1px #251c17);
+    }
+
+    .sidebar {
+        float: left;
+        display: block;
+        margin-top: 30px;
+        margin-left: -20px;
+        height: 450px;
+        width: 150px;
+        background-image: url('https://i.imgur.com/xAjCYTi.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid #251c17;
+        box-shadow: 1px 1px 4px #ff6531, -1px -1px 4px #60336c;
+    }
+
+    .aboutc {
+        float: left;
+        display: block;
+        margin-top: 30px;
+        margin-left: 25px;
+        height: 250px;
+        width: 475px;
+        overflow: auto;
+        font-family: gelasio;
+        font-size: 12px;
+        font-weight: 100;
+        color: #fff;
+        text-shadow: 1px 1px 0px #261e18;
+        text-align: left;
+        line-height: 16px;
+    }
+
+    .aboutc h1 {
+        font-family: abril fatface;
+        font-size: 25px;
+        color: #dbdbdb;
+        width: fit-content;
+        height: fit-content;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        background: linear-gradient(to top, #ff6531 -26%, #513c81);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 25px;
+        transition: .5s linear;
+    }
+
+    .aboutc span:hover h1 {
+        letter-spacing: 8px;
+        transition: .5s linear;
+    }
+
+    .aboutc p {
+        padding: 10px;
+        text-align: justify;
+        transition: .5s linear;
+    }
+
+    .aboutc span:hover p {
+        padding-left: 15px;
+    }
+
+    .aboutc p::first-line {
+        font-style: italic;
+        color: #fff;
+        transition: .5s linear;
+    }
+
+    .aboutc p::first-letter {
+        font-size: 25px;
+        font-family: abril fatface;
+        color: #b35a65;
+    }
+
+    .statsc {
+        float: left;
+        display: block;
+        margin-top: 20px;
+        margin-left: 50px;
+        height: 175px;
+        width: 425px;
+        overflow: auto;
+    }
+
+    .statsc span {
+        display: block;
+        margin-bottom: 20px;
+        height: 25px;
+        width: fit-content;
+        max-width: 475px;
+        background: linear-gradient(to right, #333, transparent);
+        line-height: 25px;
+        border-radius: 4px 0px 0px 4px;
+        overflow: visible;
+    }
+
+    .stats span.stat {
+        float: left;
+        display: block;
+        height: 25px;
+        width: fit-content;
+        font-family: abril fatface;
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: 100;
+        padding-left: 25px;
+        line-height: 20px;
+        color: #6b6b6b;
+        background: linear-gradient(to top, #ff6531 -26%, #513c81);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+    }
+
+    .stats span.info {
+        float: left;
+        display: block;
+        height: 25px;
+        width: fit-content;
+        margin-left: 19px;
+        font-family: collection;
+        color: #c7c7c7;
+        text-shadow: -1px 1px 0px #513c81, 0px 0px 8px #b35a65, 1px 1px 0px #251c17;
+        font-size: 74px;
+        text-align: left;
+        line-height: 40px;
+        background: none;
+    }
+
+    .skillsett {
+        position: relative;
+        z-index: 2;
+        float: left;
+        display: block;
+        margin-left: -230px;
+        margin-top: 330px;
+        height: 150px;
+        width: 450px;
+        line-height: 65px;
+        font-family: 'masterpiece';
+        letter-spacing: 2px;
+        font-size: 81px;
+        color: transparent;
+        text-align: right;
+        color: #eee;
+        text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
+    }
+
+    .skillsett span {
+        font-style: italic;
+        color: #ebe2f1;
+        text-shadow: -3px -3px 3px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #261e18;
+        font-size: 55px;
+    }
+
+    .skillrender {
+        float: left;
+        display: block;
+        margin-left: 0px;
+        height: 775px;
+        width: 475px;
+        background-image: url('https://i.imgur.com/DjJ3Ih7.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+
+    .skilltop {
+        float: left;
+        display: block;
+        margin-top: -440px;
+        height: 250px;
+        width: 500px;
+        border: 1px solid #fff;
+    }
+
+    .skillbottom {
+        float: left;
+        display: block;
+        margin-left: 0px;
+        margin-top: 0px;
+        height: 250px;
+        width: 500px;
+        border: 1px solid #fff;
+    }
+
+    .iconcon {
+        z-index: 1;
+        position: relative;
+        float: left;
+        display: block;
+        height: 100px;
+        width: 375px;
+        margin-top: 339px;
+        margin-left: 30px;
+    }
+
+    .icon {
+        float: left;
+        height: 100px;
+        width: 100px;
+        margin-right: 15px;
+        border: 1px solid #261e18;
+        box-shadow: 1px 1px 0px #ff6531, -1px -1px 0px #a659bb;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .i1 {
+        background-image: url('https://i.imgur.com/kEDBAFV.png');
+    }
+
+    .i2 {
+        background-image: url('https://i.imgur.com/G5QaGdO.png');
+    }
+
+    .i3 {
+        background-image: url('https://i.imgur.com/RBXAmaP.png');
+    }
+
+    .skillrender2 {
+        float: left;
+        display: block;
+        margin-left: 15px;
+        margin-top: -712px;
+        height: 400px;
+        width: 400px;
+        background-image: url('https://i.imgur.com/EBrA7WR.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: .2;
+    }
+
+    .skilltext {
+        float: left;
+        display: block;
+        height: 250px;
+        width: 600px;
+        margin-left: -15px;
+        margin-top: 0px;
+        line-height: 16px;
+        font-family: gelasio;
+        font-size: 12px;
+        color: #ebe2f1;
+        text-align: justify;
+        text-shadow: 1px 1px 0px #251c17;
+        overflow: auto;
+    }
+
+    .skilltext h1 {
+        font-family: abril fatface;
+        font-size: 45px;
+        color: #dbdbdb;
+        border-bottom: 1px solid #3d3d3d;
+        width: fit-content;
+        height: fit-content;
+        font-weight: 100;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+        letter-spacing: 1px;
+        background: linear-gradient(to right, #ff6531 -46%, #513c81);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 50px;
+        transition: .5s linear;
+    }
+
+    .skilltext span:hover h1 {
+        letter-spacing: 4px;
+        transition: .5s linear;
+    }
+
+    .skilltext h2 {
+        font-family: abril fatface;
+        font-size: 45px;
+        color: #dbdbdb;
+        border-bottom: 1px solid #3d3d3d;
+        width: fit-content;
+        height: fit-content;
+        font-weight: 100;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+        letter-spacing: 1px;
+        font-style: italic;
+        background: linear-gradient(to right, #ff6531 -46%, #a659bb);
+        text-shadow: none;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 50px;
+        transition: .5s linear;
+    }
+
+    .skilltext span:hover h2 {
+        letter-spacing: 4px;
+        transition: .5s linear;
+    }
+
+    .skilltext p {
+        padding: 15px;
+        margin-top: -77px;
+    }
+
+    .skilltext i {
+        color: #ff6531;
+        text-shadow: 1px 1px 0px #a659bb;
+        background: #251c1780;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        padding: 2px;
+        border-radius: 3px;
+        margin: 2px;
+        display: inline-block;
+    }
+
+    .skilltext i.pass {
+        color: #eee;
+        text-shadow: 1px 1px 0px #ff6531;
+        background: #ff653130;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        padding: 2px;
+        border-radius: 3px;
+        margin: 2px;
+        display: inline-block;
+    }
+
+    .skilltext b {
+        font-family: abril fatface;
+        font-size: 15px;
+        color: #eee;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 0px #000000, 3px 3px 0px #ff6531;
+    }
+
+    .skilltext b.speww {
+        font-style: italic;
+        text-shadow: 2px 2px 0px #000000, 3px 3px 0px #a659bb;
+    }
+
+    .skilltext span {
+        margin-bottom: -50px;
+        margin-top: 0px;
+        display: inline-block;
+    }
+
+    .jpapers {
+        position: relative;
+        display: block;
+        height: 500px;
+        width: 500px;
+        top: 250px;
+        margin-left: 70px;
+    }
+
+    .paper1 {
+        float: left;
+        display: block;
+        height: 400px;
+        width: 300px;
+        background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        box-shadow: 2px 2px 10px #1a1a1a;
+        filter: grayscale(.5) sepia(.4) brightness(0.8);
+        transform: rotate(-9deg);
+    }
+
+    .paper2 {
+        float: left;
+        display: block;
+        height: 500px;
+        width: 375px;
+        background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 4px;
+        box-shadow: 2px 2px 10px #1a1a1a;
+        filter: grayscale(.5) sepia(.4) brightness(0.8);
+        margin-top: -500px;
+        margin-left: 50px;
+    }
+
+    .paperover {
+        float: left;
+        display: block;
+        height: 450px;
+        width: 325px;
+        overflow: hidden;
+        margin-left: 75px;
+        margin-top: -475px;
+        font-family: gelasio;
+        font-size: 11px;
+        color: #261e18;
+        text-align: justify;
+        line-height: 19px;
+        filter: opacity(1);
+    }
+
+    .papertop {
+        float: left;
+        display: block;
+        height: 250px;
+        width: 325px;
+        overflow: auto;
+    }
+
+    .papertop h1 {
+        font-family: 'collection';
+        font-size: 82px;
+        color: #261e18;
+        text-align: left;
+        letter-spacing: 0px;
+        text-transform: lowercase;
+        margin: 0px;
+        padding: 20px;
+        font-weight: 100;
+    }
+
+    .encounternav {
+        float: right;
+        display: block;
+        height: 165px;
+        width: 250px;
+        margin-top: 25px;
+        overflow: auto;
+    }
+
+    .encounternav a {
+        display: block;
+        margin-left: 25px;
+        margin-top: 0px;
+        margin-bottom: 17px;
+        height: 25px;
+        width: 200px;
+        border-top: 1px solid #3d3d3d;
+        border-top: 1px solid #3d3d3d;
+        border-right: 1px solid #3d3d3d;
+        border-radius: 4px;
+        box-shadow: 1px 1px 5px #251c17;
+        line-height: 25px;
+        text-align: center;
+        font-family: 'collection';
+        font-size: 75px;
+        color: #251c17;
+        letter-spacing: 0px;
+        text-decoration: none;
+        font-weight: 400;
+        border-radius: 2px;
+        transition: .7s linear;
+    }
+
+    .encounternav a:hover {
+        color: #60336c;
+        box-shadow: 1px 1px 10px #000;
+        transition: .7s linear;
+    }
+
+    .encounternav a::before {
+        content: '';
+        float: left;
+        display: block;
+        height: 15px;
+        width: 15px;
+        transform: rotate(45deg);
+        margin-top: 4px;
+        margin-left: -8px;
+        margin-right: 0px;
+        background: radial-gradient(#3d3d3d 42%, transparent);
+    }
+
+    .inky {
+        float: left;
+        display: block;
+        height: 350px;
+        width: 250px;
+        background-image: url('https://i.imgur.com/ObaOUjr.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: opacity(1) grayscale(.6);
+        margin-top: -200px;
+        margin-left: -75px;
+        transform: rotate(3deg);
+        pointer-events: none;
+    }
+
+    .journeyicon {
+        float: left;
+        display: block;
+        height: 150px;
+        width: 150px;
+        background-image: url('https://i.imgur.com/FGZ9PeD.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 400px;
+        margin-left: -300px;
+        opacity: .3;
+    }
+
+    .journeyicon2 {
+        float: left;
+        display: block;
+        height: 300px;
+        width: 300px;
+        background-image: url('https://i.imgur.com/ILMmluG.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 75px;
+        margin-left: 75px;
+    }
+
+    .letterbox {
+        display: block;
+        height: 500px;
+        width: 450px;
+        top: 270px;
+        left: 545px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .inkblot {
+        float: right;
+        display: block;
+        height: 350px;
+        width: 250px;
+        position: fixed;
+        right: 85px;
+        top: -35px;
+        background-image: url('https://i.imgur.com/g3hkDEK.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        filter: grayscale(1) sepia(.5);
+        pointer-events: none;
+    }
+
+    .letterholder {
+        position: relative;
+        display: block;
+        height: 500px;
+        width: 450px;
+        overflow: hidden;
+        transition: .7s linear;
+        scroll-behavior: smooth;
+    }
+
+    .letters {
+        position: relative;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        filter: blur(3px);
+        margin-top: 0px;
+        height: 500px;
+        width: 450px;
+        top: 0px;
+        font-family: gelasio;
+        font-size: 11px;
+        color: #fff;
+        text-shadow: 0px 0px 1px #000;
+        text-align: justify;
+        line-height: 19px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        transition: .7s linear;
+    }
+
+    .letters:target {
+        top: 0px;
+        opacity: 1;
+        filter: blur(0px);
+        visibility: visible;
+        transition: .7s linear;
+    }
+
+    .friender {
+        float: right;
+        width: 450px;
+        height: 500px;
+        background-image: url('/');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .6;
+    }
+
+    .friendname {
+        float: left;
+        margin-top: -500px;
+        font-family: 'ink';
+        letter-spacing: 7px;
+        font-size: 66px;
+        color: #cac0ae;
+        text-shadow: 2px 2px 3px #251c17;
+        text-align: left;
+        height: 65px;
+        line-height: 65px;
+        width: 450px;
+    }
+
+    .friendname span {
+        float: left;
+        display: block;
+        margin-top: -30px;
+        margin-left: -56px;
+        height: 35px;
+        width: 450px;
+        line-height: 35px;
+        background: radial-gradient(#a659bb -52%, transparent 40%);
+        text-align: center;
+        border-top: 1px solid #251c17;
+        border-bottom: 1px solid #251c17;
+        font-family: 'collection';
+        font-size: 75px;
+        color: #ebe2f1;
+        filter: drop-shadow(4px 4px 1px #251c17);
+    }
+
+    .frienddesc {
+        float: left;
+        display: block;
+        margin-top: -400px;
+        margin-left: 0px;
+        height: 300px;
+        width: 300px;
+        text-align: justify;
+        overflow: auto;
+        font-family: gelasio;
+        font-size: 12px;
+        line-height: 17px;
+        filter: opacity(1);
+    }
+
+    .frienddesc i {
+        letter-spacing: 3px;
+        font-style: italic;
+        text-transform: lowercase;
+        color: #eee;
+        text-shadow: 0px 0px 4px #a659bb;
+    }
+
+    .frienddesc a {
+        font-family: 'collection';
+        font-size: 55px;
+        padding: 4px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .backpack {
+        float: left;
+        display: block;
+        height: 250px;
+        width: 250px;
+        margin-top: 25px;
+        margin-left: 80px;
+        background-image: url('https://i.imgur.com/6Zmfd0k.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: .3;
+    }
+
+    .backpackt {
+        float: left;
+        display: block;
+        height: 50px;
+        width: 250px;
+        margin-left: -250px;
+        line-height: 50px;
+        margin-top: 220px;
+        font-family: 'masterpiece';
+        letter-spacing: 2px;
+        font-size: 35px;
+        color: transparent;
+        text-align: center;
+        color: #eee;
+        text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
+    }
+
+    .invent {
+        float: left;
+        display: block;
+        height: 450px;
+        width: 370px;
+        text-align: justify;
+        overflow: auto;
+        text-align: justify;
+        overflow: auto;
+        color: #eee;
+        text-shadow: 1px 1px 0px #251c17;
+        font-family: gelasio;
+        font-size: 12px;
+        line-height: 17px;
+        margin-left: -300px;
+        margin-top: 300px;
+    }
+
+    .invent h1 {
+        font-family: abril fatface;
+        font-size: 25px;
+        color: #dbdbdb;
+        border-bottom: 1px solid #eee;
+        width: fit-content;
+        height: fit-content;
+        font-weight: 100;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+        letter-spacing: 1px;
+        font-style: italic;
+        background: linear-gradient(to right, #ff6531 -46%, #a659bb);
+        text-shadow: 2px 2px 0px #eeeeeee6;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 50px;
+        transition: .5s linear;
+    }
+
+    .invent span:hover h1 {
+        letter-spacing: 4px;
+        transition: .5s linear;
+    }
+
+    .invent p {
+        padding: 15px;
+        border-left: 1px solid #eee;
+        margin-top: -17px;
+    }
+
+    .invent p::first-letter {
+        font-family: abril fatface;
+        font-weight: 900;
+        color: #a659bb;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-style: normal;
+        text-shadow: 2px 2px 0px #ff6531;
+    }
+
+    .invent p::first-line {
+        font-style: italic;
+        text-shadow: 0px 0px 3px #ff6531, 0px 0px 5px #a659bb;
+    }
+
+    .oocpart {
+        float: left;
+        display: block;
+        height: 770px;
+        width: 550px;
+        background-image: url('https://i.imgur.com/HJL2cUw.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .oocicon {
+        float: left;
+        display: block;
+        height: 200px;
+        width: 200px;
+        margin-left: 425px;
+        margin-top: 150px;
+        border-radius: 50%;
+        background-image: url('https://i.imgur.com/FGZ9PeD.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        filter: grayscale(1);
+    }
+
+    .ooct {
+        float: left;
+        display: block;
+        height: 120px;
+        width: 550px;
+        margin-top: -50px;
+        margin-left: 100px;
+        filter: opacity(1);
+        color: #eee;
+        text-align: right;
+        font-family: 'ink';
+        font-style: italic;
+        font-size: 75px;
+        line-height: 55px;
+    }
+
+    .rules {
+        float: left;
+        display: block;
+        height: 300px;
+        width: 475px;
+        margin-top: 10px;
+        margin-left: 175px;
+        overflow: auto;
+        text-align: right;
+        font-family: spectral;
+        font-size: 12px;
+        line-height: 17px;
+        color: #eee;
+        text-shadow: 0px 0px 2px #000;
+    }
+
+    .rules h1 {
+        font-family: abril fatface;
+        font-size: 25px;
+        color: #dbdbdb;
+        width: 100%;
+        height: fit-content;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        background: linear-gradient(to bottom, #b35a65 14%, #513c81);
+        text-shadow: -2px 2px 0px #cfcfcf1a;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 25px;
+        transition: .5s linear;
+    }
+
+    .rules p {
+        padding: 10px;
+        margin-top: -35px;
+        text-align: justify;
+        transition: .5s linear;
+    }
+
+    .rules p::first-letter {
+        font-size: 15px;
+        font-family: abril fatface;
+        color: #513c81;
+        text-shadow: 1px 1px 0px #b35a65;
+    }
+
+    .flap {
+        position: fixed;
+        margin: auto;
+        top: -625px;
+        bottom: 0px;
+        left: -950px;
+        right: 0px;
+        height: 125px;
+        width: 125px;
+        background-image: url('https://i.imgur.com/xlGUvuo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 45px;
+        filter: drop-shadow(4px 4px 1px #251c17);
+        border-radius: 50%;
+        opacity: .35;
+        transition: .5s linear;
+    }
+
+    .flap:hover {
+        opacity: 1;
+        transition: .5s linear;
+    }
+</style>
+
+<div class="background"></div>
+<div class="scrollArrows">↽ scroll ⇀</div>
+
+<div id="container">
+    <div class="length"></div>
+    <div class="stats">
+        <div class="inner-con">
+            <div class="render1"></div>
+            <div class="name">Liam
+                <span style="float:right;">Ranvir</span>
+                <div class="insignia"></div>
+            </div>
+            <div class="subtitle">The Xenoglossy</div>
+            <div class="sidebar"></div>
+            <div class="aboutc">
+                <span>
+                    <h1> About - </h1>
+                    <p>
+                        A once leader of his tried-and-true friends in the Queensguard. <br>
+                        Now on a quest of self-discovery and adventure for himself. <br>
+                        Wanderlust hangs heavy over his mind, but the encounters and stories he'll write along the way
+                        will be all the worthwhile for it. <br>
+                        The tinge of regret and sadness however looms ever closer, as a constant reminder of his
+                        failures. <br>
+                    </p>
+                </span>
+                <span>
+                    <h1>Current Pursuits - </h1>
+                    <p>
+                        Destination: Unknown. <br>
+                        Passerby encounters and fleeting instances have yet to hold major import, yet.
+                    </p>
+                </span>
+                <span>
+                    <h1> The Xenoglossy - </h1>
+                    <p>
+                        The title of Liam's combat occupation. <br>
+                        The Xenoglossy imbues both light & dark variations of elemental magicks into their weapons. <br>
+                        This strength is derived from their memories and connections with individuals.
+                    </p>
+                </span>
+            </div>
+
+            <div class="statsc">
+                <span>
+                    <span class="stat">name,</span>
+                    <span class="info">liam ranvir.</span>
+                </span>
+                <span>
+                    <span class="stat">age,</span>
+                    <span class="info">twenty-four.</span>
+                </span>
+                <span>
+                    <span class="stat">occupation,</span>
+                    <span class="info">queensguard</span>
+                </span>
+                <span>
+                    <span class="stat">height,</span>
+                    <span class="info">6'0".</span>
+                </span>
+                <span>
+                    <span class="stat">weight,</span>
+                    <span class="info">184 lbs.</span>
+                </span>
+                <span>
+                    <span class="stat">race,</span>
+                    <span class="info">human.</span>
+                </span>
+                <span>
+                    <span class="stat">orientation,</span>
+                    <span class="info">demi-romantic.</span>
+                </span>
+                <span>
+                    <span class="stat">status,</span>
+                    <span class="info">solitary</span>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SKILLS & MAGIC -->
+    <div class="skills">
+        <div class="inner-con">
+            <div class="skillrender"></div>
+            <div class="skillsett">
+                skills<br>
+                <span>& spells</span>
+            </div>
+
+            <div class="iconcon">
+                <div class="icon i1"></div>
+                <div class="icon i2"></div>
+                <div class="icon i3"></div>
+            </div>
+
+            <div class="skilltext">
+                <span>
+                    <h1>xenoglossy artes</h1>
+                    <p>
+                        <b>spell</b> <i class="pass">passive</i>
+                        All basic elemental spells take on properties based on which alignment Liam has swapped to.
+                        Light will typically spread and provide AoE traits to magic, while Darkness converges magic into
+                        focused points of deadly precision.
+                    </p>
+                </span>
+
+                <span>
+                    <h2>elemental arsenal</h2>
+                    <p>
+                        <b class="speww">spell</b> <i class="pass">passive</i>
+                        Fire, Water, Wind, & Earth magicks heed Liam's call. While he holds no major mastery over any of
+                        them, the versatility combined with his Xenoglossy talents acts as a formidable toolkit to deal
+                        with a variety of encounters and situations.
+                    </p>
+                </span>
+
+                <span>
+                    <h2>chain of memories</h2>
+                    <p>
+                        <b class="speww">spell</b> <i>active</i>
+                        The Mark of the Xenoglossy empowers its bearer with the memories and connections they've made.
+                        Liam is capable of actively switching his 'Chain of Memories' to specific individuals of import
+                        in his life, thereby strenghtening his magicks and oftentimes providing him with new abilities
+                        in turn. The effects of the current Chain will remain until swapped.
+                    </p>
+                </span>
+
+                <span>
+                    <h2>vermillion flare</h2>
+                    <p>
+                        <b class="speww">spell</b> <i>active</i>
+                        Combining all elemental magicks within his arsenal, Liam unleashes a chaotic storm of focused
+                        fury upon an enemy, scorching and rendering them asunder. Usable only under the most dire of
+                        conditions and circumstances, this will leave him drained for a significant amount of time
+                        afterward.
+                    </p>
+                </span>
+
+                <span>
+                    <h1>blade logic</h1>
+                    <p>
+                        <b>skill</b> <i class="pass">passive</i>
+                        Liam adopts a duelistic style of combat most of the time, though he can handle himself just as
+                        well when the odds are stacked against him. Among his preferred weapons, he employs the use of
+                        swords and spears the most.
+                    </p>
+                </span>
+
+                <span>
+                    <h2>blade logic: rend</h2>
+                    <p>
+                        <b>skill</b> <i>active</i>
+                        The first branch of his teachings, and the objectively the most powerful given his constant
+                        usage of it. Liam attacks with his aligned elements, and sends shockwaves from his weapon that
+                        burst forth from the point of impact. Particularly useful for armored foes.
+                    </p>
+                </span>
+
+                <span>
+                    <h2>blade logic: sever</h2>
+                    <p>
+                        <b>skill</b> <i>active</i>
+                        The second branch of blade logic. Liam can send projectiles from his weapon based on his chosen
+                        elemental alignment. The effects vary dramatically between one another.
+                    </p>
+                </span>
+
+            </div>
+            <div class="skillrender2"></div>
+        </div>
+    </div>
+
+    <!-- JOURNAL AND FRIENDS -->
+    <div class="journey">
+        <div class="inner-con">
+            <div class="jpapers">
+                <div class="paper1"></div>
+                <div class="paper2"></div>
+
+                <div class="paperover">
+                    <div class="papertop">
+                        <h1>to new adventures,</h1>
+                        And to new friends. I start my journey soon, having said farewell to everyone already.
+                        It'll be strange to not have my companions at my side after so long, but I want to see what's
+                        out there.
+                        We spent so long fighting for one singular goal that we couldn't appreciate ever going off the
+                        beaten paths.
+                        <br><br>
+                        So... it's time to get out there and find what the world has in store for me.
+                    </div>
+
+                    <div class="encounternav">
+                        <a href="#e1">eris.</a>
+                        <a href="#e2">blix.</a>
+                        <a href="#e3">name.</a>
+                        <a href="#e4">name.</a>
+                        <a href="#e5">name.</a>
+                        <a href="#e6">name.</a>
+                        <a href="#e7">name.</a>
+                    </div>
+                </div>
+
+                <div class="inky"></div>
+            </div>
+            <div class="inkblot"></div>
+            <div class="letterbox">
+                <div class="letterholder">
+
+                    <div class="letters" id="e1">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/JsjiIij.png');"></div>
+                        <div class="friendname">Eris.
+                            <span>the spellblade.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>queensguard.</i> A brutish, unkempt, and violent drunkard of a woman he's come to call
+                            one of his best friends. <br>
+                            <br>
+                            <center>
+                                <i><strike>ruinous fury</strike></i> <br>
+                                abilities locked.
+                            </center>
+                            <br><br>
+                            <a href="#" target="_blank">Steadfast.</a>
+                        </div>
+                    </div>
+
+                    <div class="letters" id="e2">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/mnRFBjh.png');"></div>
+                        <div class="friendname">Blix.
+                            <span>the loyal.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>queensguard.</i> An emotionally attuned, empathetic, and kind beastkin he's come to call
+                            one of his best friends. <br>
+                            <br>
+                            <center>
+                                <i><strike>insurmountable strength</strike></i> <br>
+                                abilities locked.
+                            </center>
+                            <br><br>
+                            <a href="https://roleplay.chat/profile.php?user=Blix">Unyielding.</a>
+                        </div>
+                    </div>
+
+                    <div class="letters" id="e3">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/AHgt2S2.png');"></div>
+                        <div class="friendname">name.
+                            <span>title of fwiend.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>acquaintance.</i> A blurb on how he thinks of her, and how they met. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Proin scelerisque sagittis mauris, vel tincidunt sem
+                            congue non. Mauris tempus felis pulvinar, blandit libero vitae, faucibus erat. <br>
+                            <br>
+                            <a href="#">link to thread.</a>
+                        </div>
+                    </div>
+                    <div class="letters" id="e4">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/AHgt2S2.png');"></div>
+                        <div class="friendname">name.
+                            <span>title of fwiend.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>acquaintance.</i> A blurb on how he thinks of her, and how they met. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Proin scelerisque sagittis mauris, vel tincidunt sem
+                            congue non. Mauris tempus felis pulvinar, blandit libero vitae, faucibus erat. <br>
+                            <br>
+                            <a href="#">link to thread.</a>
+                        </div>
+                    </div>
+                    <div class="letters" id="e5">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/AHgt2S2.png');"></div>
+                        <div class="friendname">name.
+                            <span>title of fwiend.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>acquaintance.</i> A blurb on how he thinks of her, and how they met. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Proin scelerisque sagittis mauris, vel tincidunt sem
+                            congue non. Mauris tempus felis pulvinar, blandit libero vitae, faucibus erat. <br>
+                            <br>
+                            <a href="#">link to thread.</a>
+                        </div>
+                    </div>
+                    <div class="letters" id="e6">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/AHgt2S2.png');"></div>
+                        <div class="friendname">name.
+                            <span>title of fwiend.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>acquaintance.</i> A blurb on how he thinks of her, and how they met. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Proin scelerisque sagittis mauris, vel tincidunt sem
+                            congue non. Mauris tempus felis pulvinar, blandit libero vitae, faucibus erat. <br>
+                            <br>
+                            <a href="#">link to thread.</a>
+                        </div>
+                    </div>
+                    <div class="letters" id="e7">
+                        <div class="friender" style="background-image: url('https://i.imgur.com/AHgt2S2.png');"></div>
+                        <div class="friendname">name.
+                            <span>title of fwiend.</span>
+                        </div>
+                        <div class="frienddesc">
+                            <i>acquaintance.</i> A blurb on how he thinks of her, and how they met. Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit. Proin scelerisque sagittis mauris, vel tincidunt sem
+                            congue non. Mauris tempus felis pulvinar, blandit libero vitae, faucibus erat. <br>
+                            <br>
+                            <a href="#">link to thread.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ooc">
+        <div class="inner-con">
+            <div class="backpack"></div>
+            <div class="backpackt">inventory.</div>
+            <div class="invent">
+                <span>
+                    <h1>fehlgrace.</h1>
+                    <p>
+                        Refined, reforged, and remade countless times. A lightweight bastard sword that has stood the
+                        test of time and tribulations.
+                        The unique meteoric alloy it was crafted from provides it with the astounding trait to hold its
+                        edge almost indefinitely.
+                        It becomes even deadlier once imbued with Liam's magicks as a Xenoglossy.
+                    </p>
+                </span>
+                <span>
+                    <h1>a saint's ring.</h1>
+                    <p>
+                        A promise made tangible. Often worn in the form of a necklace around Liam's neck.
+                        It bears qualities similar to a communication device, and allows him to speak to Saint at
+                        certain moments.
+                    </p>
+                </span>
+                <span>
+                    <h1>traveller's pack.</h1>
+                    <p>
+                        A curious bag that can disappear and reappear on command whenever Liam wills it. Otherwise, it's
+                        used normally like any other pack.
+                        A steadfast traveling companion for any adventurer.
+                    </p>
+                </span>
+            </div>
+            <div class="oocpart">
+                <div class="oocicon"></div>
+                <div class="ooct">out of character</div>
+                <div class="rules">
+                    <span>
+                        <h1> Rules of Engagement. </h1>
+                        <p>
+                            IC≠OOC, always. Don't cross them, don't bleed into one another, just don't. <br>
+                            Approach IC or OOC, either one is fine. <br>
+                            Room & DM oriented. Will swap based on circumstances and/or mood. <br>
+                        </p>
+                    </span>
+
+                    <span>
+                        <h1> Roleplaying. </h1>
+                        <p>
+                            Story-focused posting. Smut-picky as fuck on this guy. <br>
+                            Don't assume relations. Get to know him first unless agreed upon beforehand. <br>
+                            Combat is purely for story-driven purposes. Versatile & interactive, for the fun of it.
+                        </p>
+                    </span>
+
+                    <span>
+                        <h1> Miscellaneous Details. </h1>
+                        <p>
+                            This is a <a href="https://roleplay.chat/profile.php?user=Ven" target="_blank">Ven alt.</a>
+                            <br>
+                            Code's not yours, don't touch it. <br>
+                            Check OOC profile above for more info.
+                        </p>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flap" onclick="togglePlay()"></div>
+<audio id="audio" src="https://files.catbox.moe/l9knsx.mp3" type="audio/mp3"></audio>
