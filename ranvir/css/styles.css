@@ -12,7 +12,7 @@
 
     @font-face {
         font-family: 'masterpiece';
-        src: url('https://dl.dropboxusercontent.com/s/4x98j9gmnhtrg9l/spqr.ttf');
+        src: url('../assets/fonts/spqr.ttf') format('truetype');
     }
 
     body {
