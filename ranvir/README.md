@@ -1,6 +1,6 @@
 # Ranvir Character Profile
 
-Ranvir is a character-profile website that combines my interests in creative writing, character design, and front-end development. I built the page to represent Liam Ranvir through an interactive visual experience rather than a conventional written biography. Layered artwork, expressive typography, horizontal navigation, and character-specific sections help communicate his personality and story.
+Ranvir is a character-profile website that combines my interests in creative writing, character design, and front-end development. I built the page to represent Liam Ranvir through an interactive visual experience rather than a conventional written biography. Layered artwork, expressive typography, horizontal navigation, and character-specific sections help communicate his personality and story. (Please be aware that this project was made for desktop viewability. Responsive web design was not a particular concern in the project; this was mostly just a test of my abilities to see how well I could design an aesthetic layout.)
 
 The character, narrative, and website implementation are my original work. The visual artwork is adapted from a Korean comic and is included solely as part of this personal, noncommercial demonstration. I do not claim ownership of the original images, and all artwork rights remain with their respective creators and publishers.
 
