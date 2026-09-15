@@ -74,3 +74,16 @@ audio.addEventListener('playing', () => {
 audio.addEventListener('pause', updateMusicButton);
 audio.addEventListener('ended', updateMusicButton);
 audio.addEventListener('error', showAudioError);
+
+/* Match the companion indicator to direct links and browser Back/Forward. */
+const friendLinks = [...document.querySelectorAll('.encounternav a')];
+function updateCurrentFriend() {
+    const current = friendLinks.find(link => link.hash === window.location.hash)
+        || friendLinks[0];
+    friendLinks.forEach(link => {
+        if (link === current) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+    });
+}
+window.addEventListener('hashchange', updateCurrentFriend);
+updateCurrentFriend();
