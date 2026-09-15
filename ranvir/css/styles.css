@@ -81,22 +81,6 @@
         opacity: .5;
     }
 
-    .scrollArrows {
-        position: fixed;
-        margin: auto;
-        top: -800;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 70px;
-        height: 10px;
-        font-weight: lighter;
-        font-size: 10px;
-        font-variant: small-caps;
-        text-align: center;
-        color: #ebe2f1;
-    }
-
     #container {
         position: fixed;
         margin: auto;
@@ -1096,26 +1080,80 @@
         text-shadow: 1px 1px 0px #b35a65;
     }
 
-    .flap {
-        position: fixed;
-        margin: auto;
-        top: -625px;
-        bottom: 0px;
-        left: -950px;
-        right: 0px;
-        height: 125px;
-        width: 125px;
-        background-image: url('https://i.imgur.com/xlGUvuo.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 45px;
-        filter: drop-shadow(4px 4px 1px #251c17);
-        border-radius: 50%;
-        opacity: .35;
-        transition: .5s linear;
-    }
+/* Desktop controls sit above the original composition. */
+.desktop-nav {
+    position: fixed;
+    z-index: 10;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    border: 1px solid #705263;
+    border-radius: 8px;
+    background: #211b20;
+    box-shadow: 0 3px 12px #0006;
+    white-space: nowrap;
+}
 
-    .flap:hover {
-        opacity: 1;
-        transition: .5s linear;
+.desktop-nav a,
+.desktop-nav button {
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: transparent;
+    color: #eee3ed;
+    font: 14px/20px Georgia, serif;
+    text-shadow: none;
+    cursor: pointer !important;
+}
+
+.desktop-nav a:hover,
+.desktop-nav button:hover,
+.desktop-nav a[aria-current] {
+    background: #51364e;
+    color: #fff;
+    text-shadow: none;
+}
+
+.desktop-nav a[aria-current] {
+    border-bottom-color: #efb58f;
+}
+
+.desktop-nav button {
+    border-left-color: #705263;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ffd6a5;
+    outline-offset: 3px;
+}
+
+.music-status {
+    position: fixed;
+    z-index: 10;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 8px 14px;
+    background: #211b20;
+    color: #fff;
+    font: 14px/20px Georgia, serif;
+    border-radius: 4px;
+}
+
+.music-status:empty {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
     }
+}

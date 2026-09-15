@@ -8,11 +8,18 @@
 </head>
 <body>
 <div class="background"></div>
-<div class="scrollArrows">↽ scroll ⇀</div>
+<nav class="desktop-nav" aria-label="Character sections">
+    <a href="#profile" aria-current="location">Profile</a>
+    <a href="#abilities">Skills &amp; spells</a>
+    <a href="#journal">Journal &amp; friends</a>
+    <a href="#inventory">Inventory &amp; OOC</a>
+    <button type="button" id="music-toggle" aria-controls="audio">Play music</button>
+</nav>
+<p id="music-status" class="music-status" role="status"></p>
 
 <div id="container">
     <div class="length"></div>
-    <div class="stats">
+    <div class="stats" id="profile">
         <div class="inner-con">
             <div class="render1"></div>
             <div class="name">Liam
@@ -89,7 +96,7 @@
     </div>
 
     <!-- SKILLS & MAGIC -->
-    <div class="skills">
+    <div class="skills" id="abilities">
         <div class="inner-con">
             <div class="skillrender"></div>
             <div class="skillsett">
@@ -181,7 +188,7 @@
     </div>
 
     <!-- JOURNAL AND FRIENDS -->
-    <div class="journey">
+    <div class="journey" id="journal">
         <div class="inner-con">
             <div class="jpapers">
                 <div class="paper1"></div>
@@ -252,7 +259,7 @@
         </div>
     </div>
 
-    <div class="ooc">
+    <div class="ooc" id="inventory">
         <div class="inner-con">
             <div class="backpack"></div>
             <div class="backpackt">inventory.</div>
@@ -315,7 +322,6 @@
     </div>
 </div>
 
-<div class="flap" onclick="togglePlay()"></div>
-<audio id="audio" src="https://files.catbox.moe/l9knsx.mp3" type="audio/mp3"></audio>
+<audio id="audio" preload="none" src="https://files.catbox.moe/l9knsx.mp3" type="audio/mp3"></audio>
 </body>
 </html>

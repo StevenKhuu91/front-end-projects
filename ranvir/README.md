@@ -26,7 +26,7 @@ The image and audio directories currently contain `.gitkeep` placeholders becaus
 
 - HTML
 - CSS layouts, transforms, gradients, filters, transitions, and scroll snapping
-- Vanilla JavaScript for cursor-following tooltips and audio playback
+- Vanilla JavaScript for section navigation and audio playback
 - Google Fonts plus externally hosted custom fonts
 
 ## Running locally
@@ -59,3 +59,9 @@ The exact URLs remain in `css/styles.css` and `index.html`, preserving the origi
 - The `masterpiece` font family now loads SPQR from `assets/fonts/spqr.ttf`; Inked God and Collection New Style remain external because their supplied or published terms do not clearly allow redistribution in this repository.
 - The original `background-image: url('/')` declaration is retained as-is because there was no local source asset to substitute and changing it could alter the original design behavior.
 - The page intentionally retains its original rendering mode because several legacy unitless CSS offsets depend on that behavior. Modernizing those declarations is outside this structure-only change.
+
+## Desktop controls
+
+Use the section menu to jump between Profile, Skills & spells, Journal & friends, and Inventory & OOC. The highlighted link follows the current section, including when scrolling. Tab through the menu and press Enter to activate a link.
+
+The music button supports keyboard playback and pause, cancellation while loading, and feedback if the external audio cannot load. Section transitions respect the system reduced-motion preference. The original desktop composition and external artwork sources are retained.
