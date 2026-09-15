@@ -479,9 +479,9 @@
         width: 600px;
         margin-left: -15px;
         margin-top: 0px;
-        line-height: 16px;
+        line-height: 21px;
         font-family: gelasio;
-        font-size: 12px;
+        font-size: 14px;
         color: #ebe2f1;
         text-align: justify;
         text-shadow: 1px 1px 0px #251c17;
@@ -540,8 +540,9 @@
     }
 
     .skilltext p {
-        padding: 15px;
-        margin-top: -77px;
+        padding: 0 15px;
+        margin: 0;
+        text-align: left;
     }
 
     .skilltext i {
@@ -583,10 +584,16 @@
         text-shadow: 2px 2px 0px #000000, 3px 3px 0px #a659bb;
     }
 
-    .skilltext span {
-        margin-bottom: -50px;
-        margin-top: 0px;
-        display: inline-block;
+    .skilltext > span,
+    .rules > span {
+        display: block;
+        margin: 0 0 20px;
+    }
+
+    .skilltext h1,
+    .skilltext h2,
+    .rules h1 {
+        margin: 0 0 8px;
     }
 
     .jpapers {
@@ -1042,8 +1049,8 @@
         overflow: auto;
         text-align: right;
         font-family: spectral;
-        font-size: 12px;
-        line-height: 17px;
+        font-size: 14px;
+        line-height: 21px;
         color: #eee;
         text-shadow: 0px 0px 2px #000;
     }
@@ -1067,9 +1074,9 @@
     }
 
     .rules p {
-        padding: 10px;
-        margin-top: -35px;
-        text-align: justify;
+        padding: 0 10px;
+        margin: 0;
+        text-align: left;
         transition: .5s linear;
     }
 
