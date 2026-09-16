@@ -8,7 +8,7 @@
 
 ## Context
 
-I created Liam Ranvir for an online roleplaying community. His profile gave me a place to combine original character writing with my growing interest in front-end development. I wanted readers to encounter his personality through the atmosphere of the page as well as through the biography.
+I created Liam Ranvir for an online roleplaying community. His profile gave me an opportunity to combine original character writing with my growing interest in front-end development. By exploring aesthetics of design, font choice, and colors, I wanted to convey his personality and tone without explicitly writing endless blocks of words; the biggest self-imposed restraint of this project was to show through imagery, not explain through text.
 
 This was a personal design and coding project. It was not a client engagement or a formal UX research study.
 
@@ -20,7 +20,7 @@ The original work focused on visual expression. Later revisions focused on makin
 
 ## Design intent and constraints
 
-Layered character imagery, purple and orange accents, dark surfaces, and expressive typography establish the mood. Four horizontal sections organize the character's profile, abilities, relationships, and supporting notes.
+Layered character imagery, purple and orange accents, dark surfaces, and expressive typography establish the mood. Four horizontal sections organize the character's profile, abilities, relationships, and supporting notes. All images were edited in Photoshop, to better adapt them towards the aesthetics of the layout.
 
 The layout was designed for desktop viewing. Preserving its composition was a deliberate constraint during the usability work. A phone layout was outside the scope of these revisions.
 
