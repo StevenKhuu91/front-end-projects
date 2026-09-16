@@ -94,3 +94,9 @@ The exact URLs remain in `css/styles.css` and `index.html`, preserving the origi
 Use the section menu to jump between Profile, Skills & spells, Journal & friends, and Inventory & OOC. The highlighted link follows the current section, including when scrolling. Tab through the menu and press Enter to activate a link.
 
 The music button supports keyboard playback and pause, cancellation while loading, and feedback if the external audio cannot load. Section transitions respect the system reduced-motion preference. The original desktop composition and external artwork sources are retained.
+
+## Document structure and keyboard reading
+
+The page has one main landmark, a page heading, and a heading for each of its four sections. Content headings use separate visual classes so their appearance does not depend on their heading level. Block content uses div wrappers instead of spans.
+
+Tab to a reading panel to focus it; use the arrow keys, Page Up/Page Down, or Home/End to scroll its content, then Tab to leave. A warm outline identifies the focused panel. The original rendering mode is retained to preserve legacy positioning.
