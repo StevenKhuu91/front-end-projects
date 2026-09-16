@@ -1,8 +1,37 @@
 # Ranvir Character Profile
 
-Ranvir is a character-profile website that combines my interests in creative writing, character design, and front-end development. I built the page to represent Liam Ranvir through an interactive visual experience rather than a conventional written biography. Layered artwork, expressive typography, horizontal navigation, and character-specific sections help communicate his personality and story. (Please be aware that this project was made for desktop viewability. Responsive web design was not a particular concern in the project; this was mostly just a test of my abilities to see how well I could design an aesthetic layout.)
+A desktop character-profile website built for an online roleplaying community, combining creative writing, visual design, and front-end development.
 
-The character, narrative, and website implementation are my original work. The visual artwork is adapted from a Korean comic and is included solely as part of this personal, noncommercial demonstration. I do not claim ownership of the original images, and all artwork rights remain with their respective creators and publishers.
+**[View the live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · [View the HTML](index.html) · [Back to all projects](../README.md)
+
+> **Designed for desktop viewing.** This project explores an expressive, fixed composition with horizontal sections. Phone layouts are outside its intended scope.
+
+![Ranvir profile on desktop, with layered character artwork, purple and orange accents, and a persistent section menu](docs/images/desktop-profile.png)
+
+*Profile section captured from the live site at a 1280 × 720 browser viewport.*
+
+## Purpose and my contribution
+
+I created Liam Ranvir for an online roleplaying community and built this website to present his personality, relationships, and story through an interactive visual experience.
+
+My contributions are the original character, narrative, visual layout, and HTML, CSS, and JavaScript implementation. The artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project; I do not claim ownership of the original images.
+
+## Design decisions
+
+- **Layered artwork and expressive typography** establish the character's atmosphere before readers begin the biography.
+- **Horizontal sections** separate the profile, skills and spells, journal and friends, and inventory and out-of-character notes.
+- **Purple, orange, and dark surfaces** connect the page's visual treatment with the character imagery.
+- **Persistent navigation and clearer controls** make the desktop composition easier to explore while preserving its original arrangement.
+
+## Recent improvements
+
+- Split the original page into separate HTML, CSS, and JavaScript files.
+- Added section navigation with a current-section indicator and keyboard focus styles.
+- Added a keyboard-operable music button with loading cancellation and error feedback.
+- Respected reduced-motion preferences for section transitions.
+- Improved text spacing in skills and out-of-character panels.
+- Removed placeholder friends, made Eris the initial selection, and highlighted the selected friend.
+- Proofread the narrative and clarified the project's purpose and authorship.
 
 ## Project structure
 
@@ -58,7 +87,7 @@ The exact URLs remain in `css/styles.css` and `index.html`, preserving the origi
 - `index.html` now links to `css/styles.css` and loads `js/script.js` with `defer` so the existing script runs after the page markup is available.
 - The `masterpiece` font family now loads SPQR from `assets/fonts/spqr.ttf`; Inked God and Collection New Style remain external because their supplied or published terms do not clearly allow redistribution in this repository.
 - The original `background-image: url('/')` declaration is retained as-is because there was no local source asset to substitute and changing it could alter the original design behavior.
-- The page intentionally retains its original rendering mode because several legacy unitless CSS offsets depend on that behavior. Modernizing those declarations is outside this structure-only change.
+- The page intentionally retains its original rendering mode because several legacy unitless CSS offsets depend on that behavior. Modernizing those declarations remains future maintenance work.
 
 ## Desktop controls
 
