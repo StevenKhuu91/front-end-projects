@@ -17,9 +17,11 @@
 </nav>
 <p id="music-status" class="music-status" role="status"></p>
 
-<div id="container">
+<main id="container" aria-label="Liam Ranvir character profile">
+    <h1 class="sr-only">Liam Ranvir</h1>
     <div class="length"></div>
-    <div class="stats" id="profile">
+    <div class="stats" id="profile" role="region" aria-labelledby="profile-heading">
+        <h2 id="profile-heading" class="sr-only">Profile</h2>
         <div class="inner-con">
             <div class="render1"></div>
             <div class="name">Liam
@@ -28,9 +30,9 @@
             </div>
             <div class="subtitle">The Xenoglossy</div>
             <div class="sidebar"></div>
-            <div class="aboutc">
-                <span>
-                    <h1> About - </h1>
+            <div class="aboutc scroll-panel" tabindex="0" role="region" aria-label="Character biography">
+                <div class="content-entry">
+                    <h3 class="heading-primary"> About - </h3>
                     <p>
                         Once the leader of his tried-and-true friends in the Queensguard. <br>
                         Now on his own quest for self-discovery and adventure. <br>
@@ -39,25 +41,25 @@
                         Regret and sadness, however, loom ever closer as constant reminders of his
                         failures. <br>
                     </p>
-                </span>
-                <span>
-                    <h1>Current Pursuits - </h1>
+                </div>
+                <div class="content-entry">
+                    <h3 class="heading-primary">Current Pursuits - </h3>
                     <p>
                         Destination: Unknown. <br>
                         Chance encounters and fleeting moments have yet to take on greater significance.
                     </p>
-                </span>
-                <span>
-                    <h1> The Xenoglossy - </h1>
+                </div>
+                <div class="content-entry">
+                    <h3 class="heading-primary"> The Xenoglossy - </h3>
                     <p>
                         The title of Liam's combat occupation. <br>
                         The Xenoglossy imbues their weapons with both light and dark variations of elemental magicks. <br>
                         This strength is derived from their memories and connections with individuals.
                     </p>
-                </span>
+                </div>
             </div>
 
-            <div class="statsc">
+            <div class="statsc scroll-panel" tabindex="0" role="region" aria-label="Character details">
                 <span>
                     <span class="stat">name,</span>
                     <span class="info">liam ranvir.</span>
@@ -96,7 +98,8 @@
     </div>
 
     <!-- SKILLS & MAGIC -->
-    <div class="skills" id="abilities">
+    <div class="skills" id="abilities" role="region" aria-labelledby="abilities-heading">
+        <h2 id="abilities-heading" class="sr-only">Skills and spells</h2>
         <div class="inner-con">
             <div class="skillrender"></div>
             <div class="skillsett">
@@ -110,39 +113,39 @@
                 <div class="icon i3"></div>
             </div>
 
-            <div class="skilltext">
-                <span>
-                    <h1>xenoglossy artes</h1>
+            <div class="skilltext scroll-panel" tabindex="0" role="region" aria-label="Skills and spells descriptions">
+                <div class="content-entry">
+                    <h3 class="heading-primary">xenoglossy artes</h3>
                     <p>
                         <b>spell</b> <i class="pass">passive</i>
                         All basic elemental spells take on properties based on which alignment Liam has swapped to.
                         Light will typically spread and provide AoE traits to magic, while Darkness converges magic into
                         focused points of deadly precision.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h2>elemental arsenal</h2>
+                <div class="content-entry">
+                    <h4 class="heading-secondary">elemental arsenal</h4>
                     <p>
                         <b class="speww">spell</b> <i class="pass">passive</i>
                         Fire, Water, Wind, and Earth magicks heed Liam's call. While he has yet to master any of
                         them, their versatility, combined with his Xenoglossy talents, gives him a formidable toolkit for
                         a variety of encounters and situations.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h2>chain of memories</h2>
+                <div class="content-entry">
+                    <h4 class="heading-secondary">chain of memories</h4>
                     <p>
                         <b class="speww">spell</b> <i>active</i>
                         The Mark of the Xenoglossy empowers its bearer with the memories and connections they've made.
                         Liam is capable of actively switching his 'Chain of Memories' to specific individuals of import
                         in his life, thereby strengthening his magicks and often granting him new abilities. The effects of the current Chain will remain until swapped.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h2>vermillion flare</h2>
+                <div class="content-entry">
+                    <h4 class="heading-secondary">vermillion flare</h4>
                     <p>
                         <b class="speww">spell</b> <i>active</i>
                         Combining all elemental magicks within his arsenal, Liam unleashes a chaotic storm of focused
@@ -150,36 +153,36 @@
                         conditions and circumstances, this will leave him drained for a significant amount of time
                         afterward.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h1>blade logic</h1>
+                <div class="content-entry">
+                    <h3 class="heading-primary">blade logic</h3>
                     <p>
                         <b>skill</b> <i class="pass">passive</i>
                         Liam adopts a dueling style of combat most of the time, though he can handle himself just as
                         well when the odds are stacked against him. Of his preferred weapons, he uses
                         swords and spears most often.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h2>blade logic: rend</h2>
+                <div class="content-entry">
+                    <h4 class="heading-secondary">blade logic: rend</h4>
                     <p>
                         <b>skill</b> <i>active</i>
                         The first branch of his teachings, and the most powerful thanks to his constant
                         practice. Liam attacks with his aligned elements and sends shockwaves from his weapon that
                         burst forth from the point of impact. Particularly useful for armored foes.
                     </p>
-                </span>
+                </div>
 
-                <span>
-                    <h2>blade logic: sever</h2>
+                <div class="content-entry">
+                    <h4 class="heading-secondary">blade logic: sever</h4>
                     <p>
                         <b>skill</b> <i>active</i>
                         The second branch of blade logic. Liam can send projectiles from his weapon based on his chosen
                         elemental alignment. The effects vary dramatically between alignments.
                     </p>
-                </span>
+                </div>
 
             </div>
             <div class="skillrender2"></div>
@@ -187,15 +190,16 @@
     </div>
 
     <!-- JOURNAL AND FRIENDS -->
-    <div class="journey" id="journal">
+    <div class="journey" id="journal" role="region" aria-labelledby="journal-heading">
+        <h2 id="journal-heading" class="sr-only">Journal and friends</h2>
         <div class="inner-con">
             <div class="jpapers">
                 <div class="paper1"></div>
                 <div class="paper2"></div>
 
                 <div class="paperover">
-                    <div class="papertop">
-                        <h1>to new adventures,</h1>
+                    <div class="papertop scroll-panel" tabindex="0" role="region" aria-label="Journal entry">
+                        <h3 class="heading-primary">to new adventures,</h3>
                         And to new friends. I start my journey soon, having said farewell to everyone already.
                         It'll be strange not to have my companions at my side after so long, but I want to see what's
                         out there.
@@ -219,17 +223,17 @@
 
                     <div class="letters" id="e1">
                         <div class="friender" style="background-image: url('https://i.imgur.com/JsjiIij.png');"></div>
-                        <div class="friendname">Eris.
+                        <div class="friendname" role="heading" aria-level="3">Eris.
                             <span>the spellblade.</span>
                         </div>
-                        <div class="frienddesc">
+                        <div class="frienddesc scroll-panel" tabindex="0" role="region" aria-label="Companion description">
                             <i>queensguard.</i> A brutish, unkempt, and violent drunkard of a woman he's come to call
                             one of his best friends. <br>
                             <br>
-                            <center>
-                                <i><strike>ruinous fury</strike></i> <br>
+                            <div class="centered">
+                                <i><s>ruinous fury</s></i> <br>
                                 abilities locked.
-                            </center>
+                            </div>
                             <br><br>
                             <a href="#" target="_blank">Steadfast.</a>
                         </div>
@@ -237,17 +241,17 @@
 
                     <div class="letters" id="e2">
                         <div class="friender" style="background-image: url('https://i.imgur.com/mnRFBjh.png');"></div>
-                        <div class="friendname">Blix.
+                        <div class="friendname" role="heading" aria-level="3">Blix.
                             <span>the loyal.</span>
                         </div>
-                        <div class="frienddesc">
+                        <div class="frienddesc scroll-panel" tabindex="0" role="region" aria-label="Companion description">
                             <i>queensguard.</i> An emotionally attuned, empathetic, and kind beastkin he's come to call
                             one of his best friends. <br>
                             <br>
-                            <center>
-                                <i><strike>insurmountable strength</strike></i> <br>
+                            <div class="centered">
+                                <i><s>insurmountable strength</s></i> <br>
                                 abilities locked.
-                            </center>
+                            </div>
                             <br><br>
                             <a href="https://roleplay.chat/profile.php?user=Blix">Unyielding.</a>
                         </div>
@@ -258,13 +262,14 @@
         </div>
     </div>
 
-    <div class="ooc" id="inventory">
+    <div class="ooc" id="inventory" role="region" aria-labelledby="inventory-heading">
+        <h2 id="inventory-heading" class="sr-only">Inventory and out of character</h2>
         <div class="inner-con">
             <div class="backpack"></div>
             <div class="backpackt">inventory.</div>
-            <div class="invent">
-                <span>
-                    <h1>fehlgrace.</h1>
+            <div class="invent scroll-panel" tabindex="0" role="region" aria-label="Inventory descriptions">
+                <div class="content-entry">
+                    <h3 class="heading-primary">fehlgrace.</h3>
                     <p>
                         Refined, reforged, and remade countless times. A lightweight bastard sword that has endured
                         time and countless trials.
@@ -272,55 +277,55 @@
                         edge almost indefinitely.
                         It becomes even deadlier once imbued with Liam's magicks as a Xenoglossy.
                     </p>
-                </span>
-                <span>
-                    <h1>a saint's ring.</h1>
+                </div>
+                <div class="content-entry">
+                    <h3 class="heading-primary">a saint's ring.</h3>
                     <p>
                         A promise made tangible. Often worn as a pendant around Liam's neck.
                         It acts as a communication device, allowing him to speak to Saint at
                         certain moments.
                     </p>
-                </span>
-                <span>
-                    <h1>traveller's pack.</h1>
+                </div>
+                <div class="content-entry">
+                    <h3 class="heading-primary">traveller's pack.</h3>
                     <p>
                         A curious bag that can disappear and reappear on command whenever Liam wills it. Otherwise, it's
                         used normally like any other pack.
                         A steadfast traveling companion for any adventurer.
                     </p>
-                </span>
+                </div>
             </div>
             <div class="oocpart">
                 <div class="oocicon"></div>
                 <div class="ooct">out of character</div>
-                <div class="rules">
-                    <span>
-                        <h1> Behind the Character </h1>
+                <div class="rules scroll-panel" tabindex="0" role="region" aria-label="Out of character notes">
+                    <div class="content-entry">
+                        <h3 class="heading-primary"> Behind the Character </h3>
                         <p>
                             This is a character profile that I used in an online roleplaying community. Liam Ranvir not only represents my creative writing process, but also the progress I've made in learning front-end development techniques and coding.
                         </p>
-                    </span>
+                    </div>
 
-                    <span>
-                        <h1> Design &amp; Development </h1>
+                    <div class="content-entry">
+                        <h3 class="heading-primary"> Design &amp; Development </h3>
                         <p>
                             I created the character, narrative, and website implementation. Layered imagery, expressive typography, and horizontal navigation give each section its own place in his story. Built with HTML, CSS, and vanilla JavaScript for desktop viewing.
                         </p>
-                    </span>
+                    </div>
 
-                    <span>
-                        <h1> Artwork &amp; Credits </h1>
+                    <div class="content-entry">
+                        <h3 class="heading-primary"> Artwork &amp; Credits </h3>
                         <p>
                             The artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project; my contributions are the original character, writing, and website implementation.
                         </p>
-                    </span>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
-</div>
+</main>
 
-<audio id="audio" preload="none" src="https://files.catbox.moe/l9knsx.mp3" type="audio/mp3"></audio>
+<audio id="audio" preload="none" src="https://files.catbox.moe/l9knsx.mp3"></audio>
 </body>
 </html>
