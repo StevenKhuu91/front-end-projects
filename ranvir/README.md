@@ -2,7 +2,7 @@
 
 A desktop character-profile website built for an online roleplaying community, combining creative writing, visual design, and front-end development.
 
-**[View the live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · [View the HTML](index.html) · [Back to all projects](../README.md)
+**[View the live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · [Read the case study](CASE-STUDY.md) · [View the HTML](index.html) · [Back to all projects](../README.md)
 
 > **Designed for desktop viewing.** This project explores an expressive, fixed composition with horizontal sections. Phone layouts are outside its intended scope.
 
