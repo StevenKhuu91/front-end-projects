@@ -1,3 +1,12 @@
 # Front End Projects
-These are projects that I enjoy working or have worked on! <br>
-For the purpose of a portfolio, I've gathered standout projects that I think best represent my knowledge. <br>
+
+These are projects that I enjoy working or have worked on!
+For the purpose of a portfolio, I've gathered standout projects that I think best represent my knowledge.
+
+## Ranvir Character Profile
+
+A desktop character-profile website created for an online roleplaying community. It combines original character writing, layered visual design, horizontal navigation, and HTML, CSS, and vanilla JavaScript.
+
+**[View live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · **[Project overview and source](ranvir/README.md)**
+
+Designed for desktop viewing. My contributions are the character, narrative, layout, and website implementation; third-party artwork remains credited separately in the project overview.
