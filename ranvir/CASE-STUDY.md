@@ -80,6 +80,12 @@ Working within a strong visual composition made the scope of each change importa
 
 Separating the files and reviewing changes through pull requests also made it easier to understand what each revision affected.
 
+## Incremental CSS modernization
+
+A later maintenance pass introduced shared color variables, moved inline presentation into the stylesheet, replaced the unitless journal offset with pixels, removed redundant transition prefixes, and simplified the stylesheet formatting. The composition and existing interactions remained the acceptance criteria.
+
+A trial of standards-mode HTML shifted the skills subtitle by about nine pixels. That trial was reverted rather than changing the design to accommodate it. Rendering-mode migration remains a separate task.
+
 ## Remaining work
 
 - Observe a few desktop users finding a section, reading an ability, and switching friends; use those observations to identify remaining friction.
@@ -93,4 +99,4 @@ A responsive redesign remains outside the current scope.
 
 Liam Ranvir, his narrative, and the website implementation are my original work. The visual artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project.
 
-See the [project overview](README.md#external-asset-dependencies) for the current font, image, and audio dependencies. Source hosting is documented there; it should not be read as a claim that I created the media or hold redistribution rights.
+See the [technical notes](docs/TECHNICAL-NOTES.md#external-asset-dependencies) for the current font, image, and audio dependencies. Source hosting is documented there; it should not be read as a claim that I created the media or hold redistribution rights.
