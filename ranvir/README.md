@@ -1,102 +1,39 @@
 # Ranvir Character Profile
 
-A desktop character-profile website built for an online roleplaying community, combining creative writing, visual design, and front-end development.
+A desktop character-profile website created for an online roleplaying community, combining original character writing, visual design, and front-end development.
 
-**[View the live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · [Read the case study](CASE-STUDY.md) · [View the HTML](index.html) · [Back to all projects](../README.md)
+> **Designed for desktop viewing.** The fixed composition and horizontal sections are intentional; phone layouts are outside this project's scope.
 
-> **Designed for desktop viewing.** This project explores an expressive, fixed composition with horizontal sections. Phone layouts are outside its intended scope.
+![Ranvir profile with layered character artwork and persistent navigation](docs/images/desktop-profile.png)
 
-![Ranvir profile on desktop, with layered character artwork, purple and orange accents, and a persistent section menu](docs/images/desktop-profile.png)
+**[Live demo](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** � **[Case study](CASE-STUDY.md)** � **[Source code](index.html)**
 
-*Profile section captured from the live site at a 1280 × 720 browser viewport.*
+## Key features
 
-## Purpose and my contribution
-
-I created Liam Ranvir for an online roleplaying community and built this website to present his personality, relationships, and story through an interactive visual experience.
-
-My contributions are the original character, narrative, visual layout, and HTML, CSS, and JavaScript implementation. The artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project; I do not claim ownership of the original images.
-
-## Design decisions
-
-- **Layered artwork and expressive typography** establish the character's atmosphere before readers begin the biography.
-- **Horizontal sections** separate the profile, skills and spells, journal and friends, and inventory and out-of-character notes.
-- **Purple, orange, and dark surfaces** connect the page's visual treatment with the character imagery.
-- **Persistent navigation and clearer controls** make the desktop composition easier to explore while preserving its original arrangement.
-
-## Recent improvements
-
-- Split the original page into separate HTML, CSS, and JavaScript files.
-- Added section navigation with a current-section indicator and keyboard focus styles.
-- Added a keyboard-operable music button with loading cancellation and error feedback.
-- Respected reduced-motion preferences for section transitions.
-- Improved text spacing in skills and out-of-character panels.
-- Removed placeholder friends, made Eris the initial selection, and highlighted the selected friend.
-- Proofread the narrative and clarified the project's purpose and authorship.
-
-## Project structure
-
-```text
-ranvir/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-├── assets/
-│   ├── images/
-│   ├── audio/
-│   └── fonts/
-└── README.md
-```
-
-The image and audio directories currently contain `.gitkeep` placeholders because the original repository did not contain local image or audio files. The fonts directory contains the locally hosted SPQR font and its redistribution notice.
+- Four horizontal sections with persistent navigation and a current-section indicator.
+- Keyboard-operable music controls, loading cancellation, and error feedback.
+- Focusable reading panels, visible keyboard focus, and reduced-motion support.
+- Companion cards with an initial selection and a selected-friend indicator.
+- Separate HTML, CSS, and JavaScript, with shared CSS colors and organized presentation styles.
 
 ## Technologies
 
-- HTML
-- CSS layouts, transforms, gradients, filters, transitions, and scroll snapping
-- Vanilla JavaScript for section navigation and audio playback
-- Google Fonts plus externally hosted custom fonts
+HTML, CSS, and vanilla JavaScript. No framework, package installation, or build step is required.
 
 ## Running locally
 
-Open `index.html` in a browser. For the most consistent browser behavior, serve the repository with a simple local static server and open the `/ranvir/` path.
+Open the repository in VS Code and serve it with a local static server, such as Live Server. Open `/ranvir/` in a desktop browser. Alternatively, with Python installed, run this from the repository root:
 
-The page requires an internet connection for its externally hosted fonts, images, audio, and linked profile pages.
+```sh
+python -m http.server 8000
+```
 
-## External asset dependencies
+Then visit [localhost:8000/ranvir/](http://localhost:8000/ranvir/). An internet connection is needed for external artwork, music, and some fonts.
 
-No remote media was copied into the repository during the initial structural cleanup. SPQR was later supplied locally with a notice explicitly allowing free redistribution for noncommercial use, so that font and its notice are now stored in `assets/fonts`. Other remote assets remain external unless their redistribution rights can be confirmed.
+Use the top menu to switch sections. Tab to a reading panel and use the arrow keys or Page Up/Page Down to scroll; Tab again to leave it.
 
-- Google Fonts stylesheet: Abril Fatface, Gelasio, Merriweather, and Spectral from `fonts.googleapis.com`
-- Custom fonts: `iNked God.ttf` and `CollectionNewStyle.otf` from `dl.dropboxusercontent.com`
-- Local font: `spqr.ttf` from Iconian Fonts, accompanied by its original `spqr.txt` redistribution notice
-- Images and cursor artwork: remotely hosted files from `i.imgur.com`
-- Music: `l9knsx.mp3` from `files.catbox.moe`
-- External profile links: `roleplay.chat`
+## My contribution and credits
 
-The exact URLs remain in `css/styles.css` and `index.html`, preserving the original behavior. Before redistributing or localizing any of these files, confirm that you own them or have permission from their respective creators and hosts. Once permission is established, place approved files in the matching `assets/` subdirectory and update paths relative to the referencing file:
+I created Liam Ranvir, his narrative, the visual layout, and the website implementation. The artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project; I do not claim ownership of the illustrations or music.
 
-- HTML to an image: `assets/images/example.png`
-- CSS to an image: `../assets/images/example.png`
-- CSS to a font: `../assets/fonts/example.woff2`
-- HTML to audio: `assets/audio/example.mp3`
-
-## Notes
-
-- `index.html` now links to `css/styles.css` and loads `js/script.js` with `defer` so the existing script runs after the page markup is available.
-- The `masterpiece` font family now loads SPQR from `assets/fonts/spqr.ttf`; Inked God and Collection New Style remain external because their supplied or published terms do not clearly allow redistribution in this repository.
-- The original `background-image: url('/')` declaration is retained as-is because there was no local source asset to substitute and changing it could alter the original design behavior.
-- The page intentionally retains its original rendering mode because several legacy unitless CSS offsets depend on that behavior. Modernizing those declarations remains future maintenance work.
-
-## Desktop controls
-
-Use the section menu to jump between Profile, Skills & spells, Journal & friends, and Inventory & OOC. The highlighted link follows the current section, including when scrolling. Tab through the menu and press Enter to activate a link.
-
-The music button supports keyboard playback and pause, cancellation while loading, and feedback if the external audio cannot load. Section transitions respect the system reduced-motion preference. The original desktop composition and external artwork sources are retained.
-
-## Document structure and keyboard reading
-
-The page has one main landmark, a page heading, and a heading for each of its four sections. Content headings use separate visual classes so their appearance does not depend on their heading level. Block content uses div wrappers instead of spans.
-
-Tab to a reading panel to focus it; use the arrow keys, Page Up/Page Down, or Home/End to scroll its content, then Tab to leave. A warm outline identifies the focused panel. The original rendering mode is retained to preserve legacy positioning.
+The [case study](CASE-STUDY.md) explains the design decisions, revisions, validation, and lessons learned. [Technical notes](docs/TECHNICAL-NOTES.md) cover project structure, external asset sources and notices, controls, and remaining legacy constraints.

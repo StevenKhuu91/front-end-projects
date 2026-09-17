@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gelasio&family=Merriweather:ital@1&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap');
 
+/* Shared colors retain the original palette. */
+:root {
+    --accent-orange: #ff6531;
+    --accent-purple: #513c81;
+    --surface-brown: #251c17;
+    --focus-color: #efb58f;
+}
+
+.surname { float: right; }
+#e1 .friender { background-image: url('https://i.imgur.com/JsjiIij.png'); }
+#e2 .friender { background-image: url('https://i.imgur.com/mnRFBjh.png'); }
+
 /* Heading appearance is independent of the document outline. */
 .heading-primary { margin-block: .67em; }
 .heading-secondary { margin-block: .83em; }
@@ -17,1097 +29,1089 @@
     border: 0;
 }
 .scroll-panel:focus-visible {
-    outline: 2px solid #efb58f;
+    outline: 2px solid var(--focus-color);
     outline-offset: -3px;
 }
 
 
-    @font-face {
-        font-family: 'ink';
-        src: url('https://dl.dropboxusercontent.com/s/2lvtd1mgqj1du4z/iNked%20God.ttf');
-    }
-
-    @font-face {
-        font-family: 'collection';
-        src: url('https://dl.dropboxusercontent.com/s/l6injvc83ibw8cq/CollectionNewStyle.otf');
-    }
-
-    @font-face {
-        font-family: 'masterpiece';
-        src: url('../assets/fonts/spqr.ttf') format('truetype');
-    }
-
-    body {
-        background: linear-gradient(to right, #60336c, #131313);
-        cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
-        user-select: none;
-    }
-
-    a {
-        text-decoration: none;
-        color: #ff6531;
-        text-shadow: 1px 0px 0px #ffffff;
-        font-weight: 400;
-        cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-
-        &:hover {
-            color: #8229e1;
-            text-shadow: 1px 0px 0px #ff6531;
-            cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
-            transition: all 0.3s ease-in-out;
-            -webkit-transition: all 0.3s ease-in-out;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -ms-transition: all 0.3s ease-in-out;
-        }
-    }
-
-    ::selection {
-        background: transparent;
-        color: rgba(366, 366, 366, .5);
-    }
-
-    ::-moz-selection {
-        background: transparent;
-        color: rgba(366, 366, 366, .5);
-    }
-
-    ::-webkit-scrollbar {
-        height: 0px;
-        width: 0px;
-        background: transparent;
-    }
-
-    ::-webkit-scrollbar-track {
-        width: 0px;
-        height: 0px;
-        background: transparent;
-    }
-
-    .background {
-        position: fixed;
-        margin: auto;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 100%;
-        background-image: url('https://i.imgur.com/SqcTKq8.jpg');
-        background-repeat: repeat;
-        background-size: cover;
-        filter: grayscale(1) brightness(.25);
-        opacity: .5;
-    }
-
-    #container {
-        position: fixed;
-        margin: auto;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 1110px;
-        width: 775px;
-        padding-right: 5px;
-        transform: rotate(-90deg);
-        background: linear-gradient(45deg, #1a1a1a, #261e18);
-        overflow-y: auto;
-        overflow-x: hidden;
-        border: 1px solid #131313;
-        scroll-snap-type: y mandatory;
-    }
-
-    .length {
-        margin-top: 1585px;
-        margin-left: -978px;
-        display: block;
-        float: left;
-        height: 1200px;
-        width: 3150px;
-        background-image: url('https://i.imgur.com/7Sfp6s2.png');
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 3155px;
-        transform: rotate(90deg);
-        opacity: .6;
-    }
-
-    .stats {
-        scroll-snap-align: start none;
-        display: block;
-        float: inline-end;
-        margin-top: -2784px;
-        margin-left: 0px;
-        height: 1109px;
-        width: 775px;
-        filter: opacity(1);
-        overflow: hidden;
-        transition: .9s linear;
-    }
-
-    .journey {
-        scroll-snap-align: start none;
-        display: block;
-        float: inline-end;
-        margin-top: -564;
-        margin-left: 0px;
-        height: 1109px;
-        width: 775px;
-        position: relative;
-        filter: opacity(1);
-        overflow: hidden;
-    }
-
-    .skills {
-        scroll-snap-align: start none;
-        display: block;
-        float: inline-end;
-        margin-top: -1674px;
-        margin-left: 0px;
-        height: 1109px;
-        width: 775px;
-        filter: opacity(1);
-        overflow: hidden;
-    }
-
-    .ooc {
-        scroll-snap-align: start none;
-        display: block;
-        margin-top: 3331px;
-        margin-left: 0px;
-        height: 1109px;
-        width: 775px;
-        filter: opacity(1);
-    }
-
-    .inner-con {
-        float: left;
-        margin-top: 170px;
-        margin-left: -165px;
-        height: 770px;
-        width: 1110px;
-        transform: rotate(90deg);
-    }
-
-    .render1 {
-        float: left;
-        display: block;
-        height: 780px;
-        width: 450px;
-        pointer-events: none;
-        background-image: url('https://i.imgur.com/ithINCG.png');
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: contain;
-    }
-
-    .name {
-        float: left;
-        display: block;
-        margin-top: 45px;
-        margin-left: -56px;
-        height: 150px;
-        width: 670px;
-        text-align: left;
-        line-height: 150px;
-        font-family: 'masterpiece';
-        letter-spacing: -5px;
-        font-size: 90px;
-        color: transparent;
-        background: linear-gradient(to bottom, #ff6531, #513c81 82%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(4px 4px 1px #251c17);
-    }
-
-    .insignia {
-        float: left;
-        display: block;
-        margin-top: -115px;
-        margin-left: 227px;
-        height: 100px;
-        width: 100px;
-        background-image: url('https://i.imgur.com/xlGUvuo.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        filter: drop-shadow(4px 4px 1px #251c17);
-    }
-
-    .subtitle {
-        float: left;
-        display: block;
-        margin-top: -90px;
-        margin-left: -56px;
-        height: 35px;
-        width: 575px;
-        line-height: 35px;
-        background: radial-gradient(#ff6531 -52%, transparent 40%);
-        text-align: center;
-        border-top: 1px solid #251c17;
-        border-bottom: 1px solid #251c17;
-        font-family: 'collection';
-        font-size: 75px;
-        color: #ebe2f1;
-        filter: drop-shadow(4px 4px 1px #251c17);
-    }
-
-    .sidebar {
-        float: left;
-        display: block;
-        margin-top: 30px;
-        margin-left: -20px;
-        height: 450px;
-        width: 150px;
-        background-image: url('https://i.imgur.com/xAjCYTi.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        border: 1px solid #251c17;
-        box-shadow: 1px 1px 4px #ff6531, -1px -1px 4px #60336c;
-    }
-
-    .aboutc {
-        float: left;
-        display: block;
-        margin-top: 30px;
-        margin-left: 25px;
-        height: 250px;
-        width: 475px;
-        overflow: auto;
-        font-family: gelasio;
-        font-size: 12px;
-        font-weight: 100;
-        color: #fff;
-        text-shadow: 1px 1px 0px #261e18;
-        text-align: left;
-        line-height: 16px;
-    }
-
-    .aboutc .heading-primary {
-        font-family: abril fatface;
-        font-size: 25px;
-        color: #dbdbdb;
-        width: fit-content;
-        height: fit-content;
-        font-weight: 100;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        background: linear-gradient(to top, #ff6531 -26%, #513c81);
-        text-shadow: none;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 25px;
-        transition: .5s linear;
-    }
-
-    .aboutc .content-entry:hover .heading-primary {
-        letter-spacing: 8px;
-        transition: .5s linear;
-    }
-
-    .aboutc p {
-        padding: 10px;
-        text-align: justify;
-        transition: .5s linear;
-    }
-
-    .aboutc .content-entry:hover p {
-        padding-left: 15px;
-    }
-
-    .aboutc p::first-line {
-        font-style: italic;
-        color: #fff;
-        transition: .5s linear;
-    }
-
-    .aboutc p::first-letter {
-        font-size: 25px;
-        font-family: abril fatface;
-        color: #b35a65;
-    }
-
-    .statsc {
-        float: left;
-        display: block;
-        margin-top: 20px;
-        margin-left: 50px;
-        height: 175px;
-        width: 425px;
-        overflow: auto;
-    }
-
-    .statsc span {
-        display: block;
-        margin-bottom: 20px;
-        height: 25px;
-        width: fit-content;
-        max-width: 475px;
-        background: linear-gradient(to right, #333, transparent);
-        line-height: 25px;
-        border-radius: 4px 0px 0px 4px;
-        overflow: visible;
-    }
-
-    .stats span.stat {
-        float: left;
-        display: block;
-        height: 25px;
-        width: fit-content;
-        font-family: abril fatface;
-        font-size: 25px;
-        letter-spacing: 2px;
-        font-weight: 100;
-        padding-left: 25px;
-        line-height: 20px;
-        color: #6b6b6b;
-        background: linear-gradient(to top, #ff6531 -26%, #513c81);
-        text-shadow: none;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: left;
-    }
-
-    .stats span.info {
-        float: left;
-        display: block;
-        height: 25px;
-        width: fit-content;
-        margin-left: 19px;
-        font-family: collection;
-        color: #c7c7c7;
-        text-shadow: -1px 1px 0px #513c81, 0px 0px 8px #b35a65, 1px 1px 0px #251c17;
-        font-size: 74px;
-        text-align: left;
-        line-height: 40px;
-        background: none;
-    }
-
-    .skillsett {
-        position: relative;
-        z-index: 2;
-        float: left;
-        display: block;
-        margin-left: -230px;
-        margin-top: 330px;
-        height: 150px;
-        width: 450px;
-        line-height: 65px;
-        font-family: 'masterpiece';
-        letter-spacing: 2px;
-        font-size: 81px;
-        color: transparent;
-        text-align: right;
-        color: #eee;
-        text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
-    }
-
-    .skillsett span {
-        font-style: italic;
-        color: #ebe2f1;
-        text-shadow: -3px -3px 3px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #261e18;
-        font-size: 55px;
-    }
-
-    .skillrender {
-        float: left;
-        display: block;
-        margin-left: 0px;
-        height: 775px;
-        width: 475px;
-        background-image: url('https://i.imgur.com/DjJ3Ih7.png');
-        background-repeat: no-repeat;
-        background-position: bottom center;
-    }
-
-    .skilltop {
-        float: left;
-        display: block;
-        margin-top: -440px;
-        height: 250px;
-        width: 500px;
-        border: 1px solid #fff;
-    }
-
-    .skillbottom {
-        float: left;
-        display: block;
-        margin-left: 0px;
-        margin-top: 0px;
-        height: 250px;
-        width: 500px;
-        border: 1px solid #fff;
-    }
-
-    .iconcon {
-        z-index: 1;
-        position: relative;
-        float: left;
-        display: block;
-        height: 100px;
-        width: 375px;
-        margin-top: 339px;
-        margin-left: 30px;
-    }
-
-    .icon {
-        float: left;
-        height: 100px;
-        width: 100px;
-        margin-right: 15px;
-        border: 1px solid #261e18;
-        box-shadow: 1px 1px 0px #ff6531, -1px -1px 0px #a659bb;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .i1 {
-        background-image: url('https://i.imgur.com/kEDBAFV.png');
-    }
-
-    .i2 {
-        background-image: url('https://i.imgur.com/G5QaGdO.png');
-    }
-
-    .i3 {
-        background-image: url('https://i.imgur.com/RBXAmaP.png');
-    }
-
-    .skillrender2 {
-        float: left;
-        display: block;
-        margin-left: 15px;
-        margin-top: -712px;
-        height: 400px;
-        width: 400px;
-        background-image: url('https://i.imgur.com/EBrA7WR.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        opacity: .2;
-    }
-
-    .skilltext {
-        float: left;
-        display: block;
-        height: 250px;
-        width: 600px;
-        margin-left: -15px;
-        margin-top: 0px;
-        line-height: 21px;
-        font-family: gelasio;
-        font-size: 14px;
-        color: #ebe2f1;
-        text-align: justify;
-        text-shadow: 1px 1px 0px #251c17;
-        overflow: auto;
-    }
-
-    .skilltext .heading-primary {
-        font-family: abril fatface;
-        font-size: 45px;
-        color: #dbdbdb;
-        border-bottom: 1px solid #3d3d3d;
-        width: fit-content;
-        height: fit-content;
-        font-weight: 100;
-        text-transform: uppercase;
-        padding-bottom: 6px;
-        letter-spacing: 1px;
-        background: linear-gradient(to right, #ff6531 -46%, #513c81);
-        text-shadow: none;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 50px;
-        transition: .5s linear;
-    }
-
-    .skilltext .content-entry:hover .heading-primary {
-        letter-spacing: 4px;
-        transition: .5s linear;
-    }
-
-    .skilltext .heading-secondary {
-        font-family: abril fatface;
-        font-size: 45px;
-        color: #dbdbdb;
-        border-bottom: 1px solid #3d3d3d;
-        width: fit-content;
-        height: fit-content;
-        font-weight: 100;
-        text-transform: uppercase;
-        padding-bottom: 6px;
-        letter-spacing: 1px;
-        font-style: italic;
-        background: linear-gradient(to right, #ff6531 -46%, #a659bb);
-        text-shadow: none;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 50px;
-        transition: .5s linear;
-    }
-
-    .skilltext .content-entry:hover .heading-secondary {
-        letter-spacing: 4px;
-        transition: .5s linear;
-    }
-
-    .skilltext p {
-        padding: 0 15px;
-        margin: 0;
-        text-align: left;
-    }
-
-    .skilltext i {
-        color: #ff6531;
-        text-shadow: 1px 1px 0px #a659bb;
-        background: #251c1780;
-        font-style: italic;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        padding: 2px;
-        border-radius: 3px;
-        margin: 2px;
-        display: inline-block;
-    }
-
-    .skilltext i.pass {
-        color: #eee;
-        text-shadow: 1px 1px 0px #ff6531;
-        background: #ff653130;
-        font-style: italic;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        padding: 2px;
-        border-radius: 3px;
-        margin: 2px;
-        display: inline-block;
-    }
-
-    .skilltext b {
-        font-family: abril fatface;
-        font-size: 15px;
-        color: #eee;
-        letter-spacing: 2px;
-        text-shadow: 2px 2px 0px #000000, 3px 3px 0px #ff6531;
-    }
-
-    .skilltext b.speww {
-        font-style: italic;
-        text-shadow: 2px 2px 0px #000000, 3px 3px 0px #a659bb;
-    }
-
-    .skilltext > .content-entry,
-    .rules > .content-entry {
-        display: block;
-        margin: 0 0 20px;
-    }
-
-    .skilltext .heading-primary,
-    .skilltext .heading-secondary,
-    .rules .heading-primary {
-        margin: 0 0 8px;
-    }
-
-    .jpapers {
-        position: relative;
-        display: block;
-        height: 500px;
-        width: 500px;
-        top: 250px;
-        margin-left: 70px;
-    }
-
-    .paper1 {
-        float: left;
-        display: block;
-        height: 400px;
-        width: 300px;
-        background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        box-shadow: 2px 2px 10px #1a1a1a;
-        filter: grayscale(.5) sepia(.4) brightness(0.8);
-        transform: rotate(-9deg);
-    }
-
-    .paper2 {
-        float: left;
-        display: block;
-        height: 500px;
-        width: 375px;
-        background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 4px;
-        box-shadow: 2px 2px 10px #1a1a1a;
-        filter: grayscale(.5) sepia(.4) brightness(0.8);
-        margin-top: -500px;
-        margin-left: 50px;
-    }
-
-    .paperover {
-        float: left;
-        display: block;
-        height: 450px;
-        width: 325px;
-        overflow: hidden;
-        margin-left: 75px;
-        margin-top: -475px;
-        font-family: gelasio;
-        font-size: 11px;
-        color: #261e18;
-        text-align: justify;
-        line-height: 19px;
-        filter: opacity(1);
-    }
-
-    .papertop {
-        float: left;
-        display: block;
-        height: 250px;
-        width: 325px;
-        overflow: auto;
-    }
-
-    .papertop .heading-primary {
-        font-family: 'collection';
-        font-size: 82px;
-        color: #261e18;
-        text-align: left;
-        letter-spacing: 0px;
-        text-transform: lowercase;
-        margin: 0px;
-        padding: 20px;
-        font-weight: 100;
-    }
-
-    .encounternav {
-        float: right;
-        display: block;
-        height: 165px;
-        width: 250px;
-        margin-top: 25px;
-        overflow: auto;
-    }
-
-    .encounternav a {
-        display: block;
-        margin-left: 25px;
-        margin-top: 0px;
-        margin-bottom: 17px;
-        height: 25px;
-        width: 200px;
-        border-top: 1px solid #3d3d3d;
-        border-top: 1px solid #3d3d3d;
-        border-right: 1px solid #3d3d3d;
-        border-radius: 4px;
-        box-shadow: 1px 1px 5px #251c17;
-        line-height: 25px;
-        text-align: center;
-        font-family: 'collection';
-        font-size: 75px;
-        color: #251c17;
-        letter-spacing: 0px;
-        text-decoration: none;
-        font-weight: 400;
-        border-radius: 2px;
-        transition: .7s linear;
-    }
-
-    .encounternav a:hover {
-        color: #60336c;
-        box-shadow: 1px 1px 10px #000;
-        transition: .7s linear;
-    }
-
-    .encounternav a::before {
-        content: '';
-        float: left;
-        display: block;
-        height: 15px;
-        width: 15px;
-        transform: rotate(45deg);
-        margin-top: 4px;
-        margin-left: -8px;
-        margin-right: 0px;
-        background: radial-gradient(#3d3d3d 42%, transparent);
-    }
-
-    .inky {
-        float: left;
-        display: block;
-        height: 350px;
-        width: 250px;
-        background-image: url('https://i.imgur.com/ObaOUjr.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        filter: opacity(1) grayscale(.6);
-        margin-top: -200px;
-        margin-left: -75px;
-        transform: rotate(3deg);
-        pointer-events: none;
-    }
-
-    .journeyicon {
-        float: left;
-        display: block;
-        height: 150px;
-        width: 150px;
-        background-image: url('https://i.imgur.com/FGZ9PeD.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 400px;
-        margin-left: -300px;
-        opacity: .3;
-    }
-
-    .journeyicon2 {
-        float: left;
-        display: block;
-        height: 300px;
-        width: 300px;
-        background-image: url('https://i.imgur.com/ILMmluG.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 75px;
-        margin-left: 75px;
-    }
-
-    .letterbox {
-        display: block;
-        height: 500px;
-        width: 450px;
-        top: 270px;
-        left: 545px;
-        position: absolute;
-        overflow: hidden;
-    }
-
-    .inkblot {
-        float: right;
-        display: block;
-        height: 350px;
-        width: 250px;
-        position: fixed;
-        right: 85px;
-        top: -35px;
-        background-image: url('https://i.imgur.com/g3hkDEK.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        filter: grayscale(1) sepia(.5);
-        pointer-events: none;
-    }
-
-    .letterholder {
-        position: relative;
-        display: block;
-        height: 500px;
-        width: 450px;
-        overflow: hidden;
-        transition: .7s linear;
-        scroll-behavior: smooth;
-    }
-
-    .letters {
-        position: relative;
-        display: block;
-        opacity: 0;
-        visibility: hidden;
-        filter: blur(3px);
-        margin-top: 0px;
-        height: 500px;
-        width: 450px;
-        top: 0px;
-        font-family: gelasio;
-        font-size: 11px;
-        color: #fff;
-        text-shadow: 0px 0px 1px #000;
-        text-align: justify;
-        line-height: 19px;
-        overflow: hidden;
-        scroll-behavior: smooth;
-        transition: .7s linear;
-    }
-
-    .letters:target {
-        top: 0px;
-        opacity: 1;
-        filter: blur(0px);
-        visibility: visible;
-        transition: .7s linear;
-    }
-
-    .friender {
-        float: right;
-        width: 450px;
-        height: 500px;
-        background-image: url('/');
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: .6;
-    }
-
-    .friendname {
-        float: left;
-        margin-top: -500px;
-        font-family: 'ink';
-        letter-spacing: 7px;
-        font-size: 66px;
-        color: #cac0ae;
-        text-shadow: 2px 2px 3px #251c17;
-        text-align: left;
-        height: 65px;
-        line-height: 65px;
-        width: 450px;
-    }
-
-    .friendname span {
-        float: left;
-        display: block;
-        margin-top: -30px;
-        margin-left: -56px;
-        height: 35px;
-        width: 450px;
-        line-height: 35px;
-        background: radial-gradient(#a659bb -52%, transparent 40%);
-        text-align: center;
-        border-top: 1px solid #251c17;
-        border-bottom: 1px solid #251c17;
-        font-family: 'collection';
-        font-size: 75px;
-        color: #ebe2f1;
-        filter: drop-shadow(4px 4px 1px #251c17);
-    }
-
-    .frienddesc {
-        float: left;
-        display: block;
-        margin-top: -400px;
-        margin-left: 0px;
-        height: 300px;
-        width: 300px;
-        text-align: justify;
-        overflow: auto;
-        font-family: gelasio;
-        font-size: 12px;
-        line-height: 17px;
-        filter: opacity(1);
-    }
-
-    .frienddesc i {
-        letter-spacing: 3px;
-        font-style: italic;
-        text-transform: lowercase;
-        color: #eee;
-        text-shadow: 0px 0px 4px #a659bb;
-    }
-
-    .frienddesc a {
-        font-family: 'collection';
-        font-size: 55px;
-        padding: 4px;
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .backpack {
-        float: left;
-        display: block;
-        height: 250px;
-        width: 250px;
-        margin-top: 25px;
-        margin-left: 80px;
-        background-image: url('https://i.imgur.com/6Zmfd0k.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        opacity: .3;
-    }
-
-    .backpackt {
-        float: left;
-        display: block;
-        height: 50px;
-        width: 250px;
-        margin-left: -250px;
-        line-height: 50px;
-        margin-top: 220px;
-        font-family: 'masterpiece';
-        letter-spacing: 2px;
-        font-size: 35px;
-        color: transparent;
-        text-align: center;
-        color: #eee;
-        text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
-    }
-
-    .invent {
-        float: left;
-        display: block;
-        height: 450px;
-        width: 370px;
-        text-align: justify;
-        overflow: auto;
-        text-align: justify;
-        overflow: auto;
-        color: #eee;
-        text-shadow: 1px 1px 0px #251c17;
-        font-family: gelasio;
-        font-size: 12px;
-        line-height: 17px;
-        margin-left: -300px;
-        margin-top: 300px;
-    }
-
-    .invent .heading-primary {
-        font-family: abril fatface;
-        font-size: 25px;
-        color: #dbdbdb;
-        border-bottom: 1px solid #eee;
-        width: fit-content;
-        height: fit-content;
-        font-weight: 100;
-        text-transform: uppercase;
-        padding-bottom: 6px;
-        letter-spacing: 1px;
-        font-style: italic;
-        background: linear-gradient(to right, #ff6531 -46%, #a659bb);
-        text-shadow: 2px 2px 0px #eeeeeee6;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 50px;
-        transition: .5s linear;
-    }
-
-    .invent .content-entry:hover .heading-primary {
-        letter-spacing: 4px;
-        transition: .5s linear;
-    }
-
-    .invent p {
-        padding: 15px;
-        border-left: 1px solid #eee;
-        margin-top: -17px;
-    }
-
-    .invent p::first-letter {
-        font-family: abril fatface;
-        font-weight: 900;
-        color: #a659bb;
-        font-size: 18px;
-        text-transform: uppercase;
-        font-style: normal;
-        text-shadow: 2px 2px 0px #ff6531;
-    }
-
-    .invent p::first-line {
-        font-style: italic;
-        text-shadow: 0px 0px 3px #ff6531, 0px 0px 5px #a659bb;
-    }
-
-    .oocpart {
-        float: left;
-        display: block;
-        height: 770px;
-        width: 550px;
-        background-image: url('https://i.imgur.com/HJL2cUw.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    }
-
-    .oocicon {
-        float: left;
-        display: block;
-        height: 200px;
-        width: 200px;
-        margin-left: 425px;
-        margin-top: 150px;
-        border-radius: 50%;
-        background-image: url('https://i.imgur.com/FGZ9PeD.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        filter: grayscale(1);
-    }
-
-    .ooct {
-        float: left;
-        display: block;
-        height: 120px;
-        width: 550px;
-        margin-top: -50px;
-        margin-left: 100px;
-        filter: opacity(1);
-        color: #eee;
-        text-align: right;
-        font-family: 'ink';
-        font-style: italic;
-        font-size: 75px;
-        line-height: 55px;
-    }
-
-    .rules {
-        float: left;
-        display: block;
-        height: 300px;
-        width: 475px;
-        margin-top: 10px;
-        margin-left: 175px;
-        overflow: auto;
-        text-align: right;
-        font-family: spectral;
-        font-size: 14px;
-        line-height: 21px;
-        color: #eee;
-        text-shadow: 0px 0px 2px #000;
-    }
-
-    .rules .heading-primary {
-        font-family: abril fatface;
-        font-size: 25px;
-        color: #dbdbdb;
-        width: 100%;
-        height: fit-content;
-        font-weight: 100;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        background: linear-gradient(to bottom, #b35a65 14%, #513c81);
-        text-shadow: -2px 2px 0px #cfcfcf1a;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 25px;
-        transition: .5s linear;
-    }
-
-    .rules p {
-        padding: 0 10px;
-        margin: 0;
-        text-align: left;
-        transition: .5s linear;
-    }
-
-    .rules p::first-letter {
-        font-size: 15px;
-        font-family: abril fatface;
-        color: #513c81;
-        text-shadow: 1px 1px 0px #b35a65;
-    }
+@font-face {
+    font-family: 'ink';
+    src: url('https://dl.dropboxusercontent.com/s/2lvtd1mgqj1du4z/iNked%20God.ttf');
+}
+
+@font-face {
+    font-family: 'collection';
+    src: url('https://dl.dropboxusercontent.com/s/l6injvc83ibw8cq/CollectionNewStyle.otf');
+}
+
+@font-face {
+    font-family: 'masterpiece';
+    src: url('../assets/fonts/spqr.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(to right, #60336c, #131313);
+    cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-orange);
+    text-shadow: 1px 0px 0px #ffffff;
+    font-weight: 400;
+    cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+    transition: all 0.3s ease-in-out;
+
+}
+
+a:hover {
+    color: #8229e1;
+    text-shadow: 1px 0px 0px var(--accent-orange);
+    cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
+    transition: all 0.3s ease-in-out;
+}
+
+::selection {
+    background: transparent;
+    color: rgb(255 255 255 / 50%);
+}
+
+::-moz-selection {
+    background: transparent;
+    color: rgb(255 255 255 / 50%);
+}
+
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
+
+.background {
+    position: fixed;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.imgur.com/SqcTKq8.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    filter: grayscale(1) brightness(.25);
+    opacity: .5;
+}
+
+#container {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1110px;
+    width: 775px;
+    padding-right: 5px;
+    transform: rotate(-90deg);
+    background: linear-gradient(45deg, #1a1a1a, #261e18);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #131313;
+    scroll-snap-type: y mandatory;
+}
+
+.length {
+    margin-top: 1585px;
+    margin-left: -978px;
+    display: block;
+    float: left;
+    height: 1200px;
+    width: 3150px;
+    background-image: url('https://i.imgur.com/7Sfp6s2.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 3155px;
+    transform: rotate(90deg);
+    opacity: .6;
+}
+
+.stats {
+    scroll-snap-align: start none;
+    display: block;
+    float: inline-end;
+    margin-top: -2784px;
+    margin-left: 0px;
+    height: 1109px;
+    width: 775px;
+    filter: opacity(1);
+    overflow: hidden;
+    transition: .9s linear;
+}
+
+.journey {
+    scroll-snap-align: start none;
+    display: block;
+    float: inline-end;
+    margin-top: -564px;
+    margin-left: 0px;
+    height: 1109px;
+    width: 775px;
+    position: relative;
+    filter: opacity(1);
+    overflow: hidden;
+}
+
+.skills {
+    scroll-snap-align: start none;
+    display: block;
+    float: inline-end;
+    margin-top: -1674px;
+    margin-left: 0px;
+    height: 1109px;
+    width: 775px;
+    filter: opacity(1);
+    overflow: hidden;
+}
+
+.ooc {
+    scroll-snap-align: start none;
+    display: block;
+    margin-top: 3331px;
+    margin-left: 0px;
+    height: 1109px;
+    width: 775px;
+    filter: opacity(1);
+}
+
+.inner-con {
+    float: left;
+    margin-top: 170px;
+    margin-left: -165px;
+    height: 770px;
+    width: 1110px;
+    transform: rotate(90deg);
+}
+
+.render1 {
+    float: left;
+    display: block;
+    height: 780px;
+    width: 450px;
+    pointer-events: none;
+    background-image: url('https://i.imgur.com/ithINCG.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.name {
+    float: left;
+    display: block;
+    margin-top: 45px;
+    margin-left: -56px;
+    height: 150px;
+    width: 670px;
+    text-align: left;
+    line-height: 150px;
+    font-family: 'masterpiece';
+    letter-spacing: -5px;
+    font-size: 90px;
+    color: transparent;
+    background: linear-gradient(to bottom, var(--accent-orange), var(--accent-purple) 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(4px 4px 1px var(--surface-brown));
+}
+
+.insignia {
+    float: left;
+    display: block;
+    margin-top: -115px;
+    margin-left: 227px;
+    height: 100px;
+    width: 100px;
+    background-image: url('https://i.imgur.com/xlGUvuo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(4px 4px 1px var(--surface-brown));
+}
+
+.subtitle {
+    float: left;
+    display: block;
+    margin-top: -90px;
+    margin-left: -56px;
+    height: 35px;
+    width: 575px;
+    line-height: 35px;
+    background: radial-gradient(var(--accent-orange) -52%, transparent 40%);
+    text-align: center;
+    border-top: 1px solid var(--surface-brown);
+    border-bottom: 1px solid var(--surface-brown);
+    font-family: 'collection';
+    font-size: 75px;
+    color: #ebe2f1;
+    filter: drop-shadow(4px 4px 1px var(--surface-brown));
+}
+
+.sidebar {
+    float: left;
+    display: block;
+    margin-top: 30px;
+    margin-left: -20px;
+    height: 450px;
+    width: 150px;
+    background-image: url('https://i.imgur.com/xAjCYTi.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid var(--surface-brown);
+    box-shadow: 1px 1px 4px var(--accent-orange), -1px -1px 4px #60336c;
+}
+
+.aboutc {
+    float: left;
+    display: block;
+    margin-top: 30px;
+    margin-left: 25px;
+    height: 250px;
+    width: 475px;
+    overflow: auto;
+    font-family: gelasio;
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 1px 1px 0px #261e18;
+    text-align: left;
+    line-height: 16px;
+}
+
+.aboutc .heading-primary {
+    font-family: abril fatface;
+    font-size: 25px;
+    color: #dbdbdb;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(to top, var(--accent-orange) -26%, var(--accent-purple));
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 25px;
+    transition: .5s linear;
+}
+
+.aboutc .content-entry:hover .heading-primary {
+    letter-spacing: 8px;
+    transition: .5s linear;
+}
+
+.aboutc p {
+    padding: 10px;
+    text-align: justify;
+    transition: .5s linear;
+}
+
+.aboutc .content-entry:hover p {
+    padding-left: 15px;
+}
+
+.aboutc p::first-line {
+    font-style: italic;
+    color: #fff;
+    transition: .5s linear;
+}
+
+.aboutc p::first-letter {
+    font-size: 25px;
+    font-family: abril fatface;
+    color: #b35a65;
+}
+
+.statsc {
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 175px;
+    width: 425px;
+    overflow: auto;
+}
+
+.statsc span {
+    display: block;
+    margin-bottom: 20px;
+    height: 25px;
+    width: fit-content;
+    max-width: 475px;
+    background: linear-gradient(to right, #333, transparent);
+    line-height: 25px;
+    border-radius: 4px 0px 0px 4px;
+    overflow: visible;
+}
+
+.stats span.stat {
+    float: left;
+    display: block;
+    height: 25px;
+    width: fit-content;
+    font-family: abril fatface;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    padding-left: 25px;
+    line-height: 20px;
+    color: #6b6b6b;
+    background: linear-gradient(to top, var(--accent-orange) -26%, var(--accent-purple));
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+.stats span.info {
+    float: left;
+    display: block;
+    height: 25px;
+    width: fit-content;
+    margin-left: 19px;
+    font-family: collection;
+    color: #c7c7c7;
+    text-shadow: -1px 1px 0px var(--accent-purple), 0px 0px 8px #b35a65, 1px 1px 0px var(--surface-brown);
+    font-size: 74px;
+    text-align: left;
+    line-height: 40px;
+    background: none;
+}
+
+.skillsett {
+    position: relative;
+    z-index: 2;
+    float: left;
+    display: block;
+    margin-left: -230px;
+    margin-top: 330px;
+    height: 150px;
+    width: 450px;
+    line-height: 65px;
+    font-family: 'masterpiece';
+    letter-spacing: 2px;
+    font-size: 81px;
+    color: transparent;
+    text-align: right;
+    color: #eee;
+    text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
+}
+
+.skillsett span {
+    font-style: italic;
+    color: #ebe2f1;
+    text-shadow: -3px -3px 3px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #261e18;
+    font-size: 55px;
+}
+
+.skillrender {
+    float: left;
+    display: block;
+    margin-left: 0px;
+    height: 775px;
+    width: 475px;
+    background-image: url('https://i.imgur.com/DjJ3Ih7.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.skilltop {
+    float: left;
+    display: block;
+    margin-top: -440px;
+    height: 250px;
+    width: 500px;
+    border: 1px solid #fff;
+}
+
+.skillbottom {
+    float: left;
+    display: block;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 250px;
+    width: 500px;
+    border: 1px solid #fff;
+}
+
+.iconcon {
+    z-index: 1;
+    position: relative;
+    float: left;
+    display: block;
+    height: 100px;
+    width: 375px;
+    margin-top: 339px;
+    margin-left: 30px;
+}
+
+.icon {
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-right: 15px;
+    border: 1px solid #261e18;
+    box-shadow: 1px 1px 0px var(--accent-orange), -1px -1px 0px #a659bb;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.i1 {
+    background-image: url('https://i.imgur.com/kEDBAFV.png');
+}
+
+.i2 {
+    background-image: url('https://i.imgur.com/G5QaGdO.png');
+}
+
+.i3 {
+    background-image: url('https://i.imgur.com/RBXAmaP.png');
+}
+
+.skillrender2 {
+    float: left;
+    display: block;
+    margin-left: 15px;
+    margin-top: -712px;
+    height: 400px;
+    width: 400px;
+    background-image: url('https://i.imgur.com/EBrA7WR.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: .2;
+}
+
+.skilltext {
+    float: left;
+    display: block;
+    height: 250px;
+    width: 600px;
+    margin-left: -15px;
+    margin-top: 0px;
+    line-height: 21px;
+    font-family: gelasio;
+    font-size: 14px;
+    color: #ebe2f1;
+    text-align: justify;
+    text-shadow: 1px 1px 0px var(--surface-brown);
+    overflow: auto;
+}
+
+.skilltext .heading-primary {
+    font-family: abril fatface;
+    font-size: 45px;
+    color: #dbdbdb;
+    border-bottom: 1px solid #3d3d3d;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, var(--accent-orange) -46%, var(--accent-purple));
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px;
+    transition: .5s linear;
+}
+
+.skilltext .content-entry:hover .heading-primary {
+    letter-spacing: 4px;
+    transition: .5s linear;
+}
+
+.skilltext .heading-secondary {
+    font-family: abril fatface;
+    font-size: 45px;
+    color: #dbdbdb;
+    border-bottom: 1px solid #3d3d3d;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    letter-spacing: 1px;
+    font-style: italic;
+    background: linear-gradient(to right, var(--accent-orange) -46%, #a659bb);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px;
+    transition: .5s linear;
+}
+
+.skilltext .content-entry:hover .heading-secondary {
+    letter-spacing: 4px;
+    transition: .5s linear;
+}
+
+.skilltext p {
+    padding: 0 15px;
+    margin: 0;
+    text-align: left;
+}
+
+.skilltext i {
+    color: var(--accent-orange);
+    text-shadow: 1px 1px 0px #a659bb;
+    background: #251c1780;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 2px;
+    border-radius: 3px;
+    margin: 2px;
+    display: inline-block;
+}
+
+.skilltext i.pass {
+    color: #eee;
+    text-shadow: 1px 1px 0px var(--accent-orange);
+    background: #ff653130;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 2px;
+    border-radius: 3px;
+    margin: 2px;
+    display: inline-block;
+}
+
+.skilltext b {
+    font-family: abril fatface;
+    font-size: 15px;
+    color: #eee;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #000000, 3px 3px 0px var(--accent-orange);
+}
+
+.skilltext b.speww {
+    font-style: italic;
+    text-shadow: 2px 2px 0px #000000, 3px 3px 0px #a659bb;
+}
+
+.skilltext > .content-entry,
+.rules > .content-entry {
+    display: block;
+    margin: 0 0 20px;
+}
+
+.skilltext .heading-primary,
+.skilltext .heading-secondary,
+.rules .heading-primary {
+    margin: 0 0 8px;
+}
+
+.jpapers {
+    position: relative;
+    display: block;
+    height: 500px;
+    width: 500px;
+    top: 250px;
+    margin-left: 70px;
+}
+
+.paper1 {
+    float: left;
+    display: block;
+    height: 400px;
+    width: 300px;
+    background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px #1a1a1a;
+    filter: grayscale(.5) sepia(.4) brightness(0.8);
+    transform: rotate(-9deg);
+}
+
+.paper2 {
+    float: left;
+    display: block;
+    height: 500px;
+    width: 375px;
+    background-image: url('https://i.imgur.com/SqcTKq8.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px #1a1a1a;
+    filter: grayscale(.5) sepia(.4) brightness(0.8);
+    margin-top: -500px;
+    margin-left: 50px;
+}
+
+.paperover {
+    float: left;
+    display: block;
+    height: 450px;
+    width: 325px;
+    overflow: hidden;
+    margin-left: 75px;
+    margin-top: -475px;
+    font-family: gelasio;
+    font-size: 11px;
+    color: #261e18;
+    text-align: justify;
+    line-height: 19px;
+    filter: opacity(1);
+}
+
+.papertop {
+    float: left;
+    display: block;
+    height: 250px;
+    width: 325px;
+    overflow: auto;
+}
+
+.papertop .heading-primary {
+    font-family: 'collection';
+    font-size: 82px;
+    color: #261e18;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: lowercase;
+    margin: 0px;
+    padding: 20px;
+    font-weight: 100;
+}
+
+.encounternav {
+    float: right;
+    display: block;
+    height: 165px;
+    width: 250px;
+    margin-top: 25px;
+    overflow: auto;
+}
+
+.encounternav a {
+    display: block;
+    margin-left: 25px;
+    margin-top: 0px;
+    margin-bottom: 17px;
+    height: 25px;
+    width: 200px;
+    border-top: 1px solid #3d3d3d;
+    border-top: 1px solid #3d3d3d;
+    border-right: 1px solid #3d3d3d;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px var(--surface-brown);
+    line-height: 25px;
+    text-align: center;
+    font-family: 'collection';
+    font-size: 75px;
+    color: var(--surface-brown);
+    letter-spacing: 0px;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: .7s linear;
+}
+
+.encounternav a:hover {
+    color: #60336c;
+    box-shadow: 1px 1px 10px #000;
+    transition: .7s linear;
+}
+
+.encounternav a::before {
+    content: '';
+    float: left;
+    display: block;
+    height: 15px;
+    width: 15px;
+    transform: rotate(45deg);
+    margin-top: 4px;
+    margin-left: -8px;
+    margin-right: 0px;
+    background: radial-gradient(#3d3d3d 42%, transparent);
+}
+
+.inky {
+    float: left;
+    display: block;
+    height: 350px;
+    width: 250px;
+    background-image: url('https://i.imgur.com/ObaOUjr.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: opacity(1) grayscale(.6);
+    margin-top: -200px;
+    margin-left: -75px;
+    transform: rotate(3deg);
+    pointer-events: none;
+}
+
+.journeyicon {
+    float: left;
+    display: block;
+    height: 150px;
+    width: 150px;
+    background-image: url('https://i.imgur.com/FGZ9PeD.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 400px;
+    margin-left: -300px;
+    opacity: .3;
+}
+
+.journeyicon2 {
+    float: left;
+    display: block;
+    height: 300px;
+    width: 300px;
+    background-image: url('https://i.imgur.com/ILMmluG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 75px;
+    margin-left: 75px;
+}
+
+.letterbox {
+    display: block;
+    height: 500px;
+    width: 450px;
+    top: 270px;
+    left: 545px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.inkblot {
+    float: right;
+    display: block;
+    height: 350px;
+    width: 250px;
+    position: fixed;
+    right: 85px;
+    top: -35px;
+    background-image: url('https://i.imgur.com/g3hkDEK.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(1) sepia(.5);
+    pointer-events: none;
+}
+
+.letterholder {
+    position: relative;
+    display: block;
+    height: 500px;
+    width: 450px;
+    overflow: hidden;
+    transition: .7s linear;
+    scroll-behavior: smooth;
+}
+
+.letters {
+    position: relative;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(3px);
+    margin-top: 0px;
+    height: 500px;
+    width: 450px;
+    top: 0px;
+    font-family: gelasio;
+    font-size: 11px;
+    color: #fff;
+    text-shadow: 0px 0px 1px #000;
+    text-align: justify;
+    line-height: 19px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: .7s linear;
+}
+
+.letters:target {
+    top: 0px;
+    opacity: 1;
+    filter: blur(0px);
+    visibility: visible;
+    transition: .7s linear;
+}
+
+.friender {
+    float: right;
+    width: 450px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .6;
+}
+
+.friendname {
+    float: left;
+    margin-top: -500px;
+    font-family: 'ink';
+    letter-spacing: 7px;
+    font-size: 66px;
+    color: #cac0ae;
+    text-shadow: 2px 2px 3px var(--surface-brown);
+    text-align: left;
+    height: 65px;
+    line-height: 65px;
+    width: 450px;
+}
+
+.friendname span {
+    float: left;
+    display: block;
+    margin-top: -30px;
+    margin-left: -56px;
+    height: 35px;
+    width: 450px;
+    line-height: 35px;
+    background: radial-gradient(#a659bb -52%, transparent 40%);
+    text-align: center;
+    border-top: 1px solid var(--surface-brown);
+    border-bottom: 1px solid var(--surface-brown);
+    font-family: 'collection';
+    font-size: 75px;
+    color: #ebe2f1;
+    filter: drop-shadow(4px 4px 1px var(--surface-brown));
+}
+
+.frienddesc {
+    float: left;
+    display: block;
+    margin-top: -400px;
+    margin-left: 0px;
+    height: 300px;
+    width: 300px;
+    text-align: justify;
+    overflow: auto;
+    font-family: gelasio;
+    font-size: 12px;
+    line-height: 17px;
+    filter: opacity(1);
+}
+
+.frienddesc i {
+    letter-spacing: 3px;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #eee;
+    text-shadow: 0px 0px 4px #a659bb;
+}
+
+.frienddesc a {
+    font-family: 'collection';
+    font-size: 55px;
+    padding: 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.backpack {
+    float: left;
+    display: block;
+    height: 250px;
+    width: 250px;
+    margin-top: 25px;
+    margin-left: 80px;
+    background-image: url('https://i.imgur.com/6Zmfd0k.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: .3;
+}
+
+.backpackt {
+    float: left;
+    display: block;
+    height: 50px;
+    width: 250px;
+    margin-left: -250px;
+    line-height: 50px;
+    margin-top: 220px;
+    font-family: 'masterpiece';
+    letter-spacing: 2px;
+    font-size: 35px;
+    color: transparent;
+    text-align: center;
+    color: #eee;
+    text-shadow: -3px -3px 0px #b35a65, 3px 3px 0px #60336c, 0px 0px 4px #000;
+}
+
+.invent {
+    float: left;
+    display: block;
+    height: 450px;
+    width: 370px;
+    text-align: justify;
+    overflow: auto;
+    text-align: justify;
+    overflow: auto;
+    color: #eee;
+    text-shadow: 1px 1px 0px var(--surface-brown);
+    font-family: gelasio;
+    font-size: 12px;
+    line-height: 17px;
+    margin-left: -300px;
+    margin-top: 300px;
+}
+
+.invent .heading-primary {
+    font-family: abril fatface;
+    font-size: 25px;
+    color: #dbdbdb;
+    border-bottom: 1px solid #eee;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    letter-spacing: 1px;
+    font-style: italic;
+    background: linear-gradient(to right, var(--accent-orange) -46%, #a659bb);
+    text-shadow: 2px 2px 0px #eeeeeee6;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 50px;
+    transition: .5s linear;
+}
+
+.invent .content-entry:hover .heading-primary {
+    letter-spacing: 4px;
+    transition: .5s linear;
+}
+
+.invent p {
+    padding: 15px;
+    border-left: 1px solid #eee;
+    margin-top: -17px;
+}
+
+.invent p::first-letter {
+    font-family: abril fatface;
+    font-weight: 900;
+    color: #a659bb;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-style: normal;
+    text-shadow: 2px 2px 0px var(--accent-orange);
+}
+
+.invent p::first-line {
+    font-style: italic;
+    text-shadow: 0px 0px 3px var(--accent-orange), 0px 0px 5px #a659bb;
+}
+
+.oocpart {
+    float: left;
+    display: block;
+    height: 770px;
+    width: 550px;
+    background-image: url('https://i.imgur.com/HJL2cUw.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.oocicon {
+    float: left;
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin-left: 425px;
+    margin-top: 150px;
+    border-radius: 50%;
+    background-image: url('https://i.imgur.com/FGZ9PeD.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: grayscale(1);
+}
+
+.ooct {
+    float: left;
+    display: block;
+    height: 120px;
+    width: 550px;
+    margin-top: -50px;
+    margin-left: 100px;
+    filter: opacity(1);
+    color: #eee;
+    text-align: right;
+    font-family: 'ink';
+    font-style: italic;
+    font-size: 75px;
+    line-height: 55px;
+}
+
+.rules {
+    float: left;
+    display: block;
+    height: 300px;
+    width: 475px;
+    margin-top: 10px;
+    margin-left: 175px;
+    overflow: auto;
+    text-align: right;
+    font-family: spectral;
+    font-size: 14px;
+    line-height: 21px;
+    color: #eee;
+    text-shadow: 0px 0px 2px #000;
+}
+
+.rules .heading-primary {
+    font-family: abril fatface;
+    font-size: 25px;
+    color: #dbdbdb;
+    width: 100%;
+    height: fit-content;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(to bottom, #b35a65 14%, var(--accent-purple));
+    text-shadow: -2px 2px 0px #cfcfcf1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 25px;
+    transition: .5s linear;
+}
+
+.rules p {
+    padding: 0 10px;
+    margin: 0;
+    text-align: left;
+    transition: .5s linear;
+}
+
+.rules p::first-letter {
+    font-size: 15px;
+    font-family: abril fatface;
+    color: var(--accent-purple);
+    text-shadow: 1px 1px 0px #b35a65;
+}
 
 /* Desktop controls sit above the original composition. */
 .desktop-nav {
@@ -1149,7 +1153,7 @@
 }
 
 .desktop-nav a[aria-current] {
-    border-bottom-color: #efb58f;
+    border-bottom-color: var(--focus-color);
 }
 
 .desktop-nav button {
@@ -1203,5 +1207,5 @@ button:focus-visible {
 .encounternav a[aria-current="true"] {
     color: #eee3ed;
     background: #51364e;
-    box-shadow: inset 0 -2px #efb58f, 1px 1px 5px #251c17;
+    box-shadow: inset 0 -2px var(--focus-color), 1px 1px 5px var(--surface-brown);
 }
