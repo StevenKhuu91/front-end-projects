@@ -12,7 +12,7 @@ A desktop character-profile website created for an online roleplaying community,
 
 - Four horizontal sections with persistent navigation and a current-section indicator.
 - Keyboard-operable music controls, loading cancellation, and error feedback.
-- Focusable reading panels, visible keyboard focus, and reduced-motion support.
+- A keyboard skip link, focusable reading panels, visible focus and text selection, and reduced-motion support.
 - Companion cards with an initial selection and a selected-friend indicator.
 - Separate HTML, CSS, and JavaScript, with shared CSS colors and organized presentation styles.
 
@@ -30,10 +30,12 @@ python -m http.server 8000
 
 Then visit [localhost:8000/ranvir/](http://localhost:8000/ranvir/). An internet connection is needed for external artwork, music, and some fonts.
 
-Use the top menu to switch sections. Tab to a reading panel and use the arrow keys or Page Up/Page Down to scroll; Tab again to leave it.
+Keyboard users can use the first Tab stop, “Skip to profile,” to jump to the biography. Use the top menu to switch sections. Tab to a reading panel and use the arrow keys or Page Up/Page Down to scroll; Tab again to leave it.
 
 ## My contribution and credits
 
 I created Liam Ranvir, his narrative, the visual layout, and the website implementation. The artwork is adapted from a Korean comic and belongs to its respective creators and publishers. This is a personal, noncommercial project; I do not claim ownership of the illustrations or music.
 
 The [case study](CASE-STUDY.md) explains the design decisions, revisions, validation, and lessons learned. [Technical notes](docs/TECHNICAL-NOTES.md) cover project structure, external asset sources and notices, controls, and remaining legacy constraints.
+
+[Desktop accessibility review](docs/ACCESSIBILITY-REVIEW.md) records the focused checks and remaining limitations.

@@ -87,3 +87,10 @@ function updateCurrentFriend() {
 }
 window.addEventListener('hashchange', updateCurrentFriend);
 updateCurrentFriend();
+
+/* Bypass the navigation without changing companion selection or URL history. */
+document.querySelector('.skip-link').addEventListener('click', event => {
+    event.preventDefault();
+    container.scrollTo({ top: sectionPosition(sections[0]), behavior: 'instant' });
+    document.getElementById('profile-reading').focus({ preventScroll: true });
+});

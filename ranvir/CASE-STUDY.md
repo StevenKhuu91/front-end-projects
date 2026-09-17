@@ -64,6 +64,38 @@ The narrative received a spelling and grammar pass while retaining its fantasy t
 
 The original single-file implementation was separated into HTML, CSS, and JavaScript files. Subsequent refinements were made through focused branches and pull requests, keeping changes reviewable.
 
+## Before and after
+
+These screenshots compare real repository revisions at the same 1280 × 720 desktop viewport. External artwork did not render in this local preview session; the images document the interface and text changes, not the complete art presentation shown above. Historical screenshots retain the wording from their source revisions.
+
+### Navigation: visible choices instead of discovery by scrolling
+
+**Before:** The profile had no persistent section menu. Readers had to discover how to move through the horizontal composition.
+
+![Before: profile without a persistent section menu](docs/images/navigation-before.png)
+
+**After:** Named section links and a current-section highlight make the available destinations visible. The menu overlays the composition without moving its panels.
+
+![After: persistent section menu above the profile](docs/images/navigation-after.png)
+
+Before source: [6b4d348](https://github.com/StevenKhuu91/front-end-projects/commit/6b4d348). After: the desktop accessibility revision documented below. This comparison records an implementation change, not a measured improvement from user testing.
+
+### Readability: separate headings from body copy
+
+**Before:** Skills headings overlapped their descriptions, weakening the reading hierarchy.
+
+![Before: skills headings crowd the body text](docs/images/readability-before.png)
+
+**After:** Larger body text, increased line spacing, and explicit gaps separate each heading from its explanation. The reading panel stays 600 × 250 pixels in the same position; more of the content is reached by scrolling.
+
+![After: distinct headings and readable descriptions](docs/images/readability-after.png)
+
+Before source: [a956555](https://github.com/StevenKhuu91/front-end-projects/commit/a956555). After: the desktop accessibility revision documented below. These spacing improvements were made in earlier revisions; this documentation pass records their effect.
+
+### Focused desktop accessibility follow-up
+
+A keyboard-only skip link now takes readers directly to the profile biography. Text selection has a visible highlight, and the opening letters in the OOC paragraphs use a lighter color. A comparison of 178 existing element rectangles found no position or size changes at 1280 × 720. See the [review notes](docs/ACCESSIBILITY-REVIEW.md) for the checks and retained limitations.
+
 ## Validation and outcome
 
 Desktop checks included 1440 × 1000 and 1366 × 768 browser viewports during the usability revisions. Checks covered section navigation, keyboard activation, friend selection, and browser Back behavior.
@@ -89,7 +121,7 @@ A trial of standards-mode HTML shifted the skills subtitle by about nine pixels.
 ## Remaining work
 
 - Observe a few desktop users finding a section, reading an ability, and switching friends; use those observations to identify remaining friction.
-- Check keyboard focus and nested scrolling more thoroughly, along with contrast and additional desktop browsers.
+- Extend the focused keyboard and contrast review to additional desktop browsers and a screen reader; reassess decorative gradient text if the visual design is revisited.
 - Complete source attribution for external artwork and music, and document any verified reuse permissions.
 - Review legacy CSS and rendering-mode dependencies carefully before modernizing them.
 
