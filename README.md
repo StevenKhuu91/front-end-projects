@@ -1,8 +1,5 @@
 # Front End Projects
 
-These are projects that I enjoy working or have worked on!
-For the purpose of a portfolio, I've gathered standout projects that I think best represent my knowledge.
-
 ## Ranvir Character Profile
 
 A desktop character-profile website created for an online roleplaying community. It combines original character writing, layered visual design, horizontal navigation, and HTML, CSS, and vanilla JavaScript.
