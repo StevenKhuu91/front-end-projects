@@ -1,6 +1,6 @@
 # Ranvir technical notes
 
-[Project overview](../README.md) · [Case study](../CASE-STUDY.md)
+[Project overview](../README.md) Â· [Case study](../CASE-STUDY.md)
 
 Paths in this document are relative to the `ranvir/` directory.
 
