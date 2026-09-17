@@ -52,7 +52,7 @@
 body {
     background: linear-gradient(to right, #60336c, #131313);
     cursor: url('https://i.imgur.com/gIONUZf.png'), auto !important;
-    user-select: none;
+    user-select: text;
 }
 
 a {
@@ -73,13 +73,13 @@ a:hover {
 }
 
 ::selection {
-    background: transparent;
-    color: rgb(255 255 255 / 50%);
+    background: #51364e;
+    color: #fff;
 }
 
 ::-moz-selection {
-    background: transparent;
-    color: rgb(255 255 255 / 50%);
+    background: #51364e;
+    color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -1109,7 +1109,7 @@ a:hover {
 .rules p::first-letter {
     font-size: 15px;
     font-family: abril fatface;
-    color: var(--accent-purple);
+    color: #d7b7e8;
     text-shadow: 1px 1px 0px #b35a65;
 }
 
@@ -1208,4 +1208,23 @@ button:focus-visible {
     color: #eee3ed;
     background: #51364e;
     box-shadow: inset 0 -2px var(--focus-color), 1px 1px 5px var(--surface-brown);
+}
+
+/* Visible only when reached by keyboard; never changes the composition. */
+.skip-link {
+    position: fixed;
+    z-index: 20;
+    top: 12px;
+    left: 12px;
+    transform: translateY(-200%);
+    padding: 10px 14px;
+    border-radius: 4px;
+    background: #211b20;
+    color: #fff;
+    font: 14px/20px Georgia, serif;
+    text-shadow: none;
+    transition: none;
+}
+.skip-link:focus {
+    transform: translateY(0);
 }
