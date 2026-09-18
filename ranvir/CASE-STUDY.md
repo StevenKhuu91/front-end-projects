@@ -2,9 +2,11 @@
 
 **Personal project · UI design and front-end development · HTML, CSS, JavaScript**
 
-[View live project](https://stevenkhuu91.github.io/front-end-projects/ranvir/) · [Project overview](README.md) · [Source code](index.html)
+[View live project](https://stevenkhuu91.github.io/liam-ranvir-profile/ranvir/) · [Project overview](README.md) · [Source code](index.html)
 
 ![Ranvir's desktop profile with layered artwork and a persistent section menu](docs/images/desktop-profile.png)
+
+[Take a short visual walkthrough](docs/WALKTHROUGH.md) to see the current interface in use.
 
 ## Context
 
@@ -66,7 +68,7 @@ The original single-file implementation was separated into HTML, CSS, and JavaSc
 
 ## Before and after
 
-These screenshots compare real repository revisions at the same 1280 × 720 desktop viewport. External artwork did not render in this local preview session; the images document the interface and text changes, not the complete art presentation shown above. Historical screenshots retain the wording from their source revisions.
+These screenshots compare real repository revisions at the same 1280 × 720 desktop viewport. The historical local previews omit external artwork; the updated after screenshots were captured from the live site with artwork visible on September 17, 2026. Missing artwork in the before images is a preview limitation, not a design change. Historical screenshots retain the wording from their source revisions.
 
 ### Navigation: visible choices instead of discovery by scrolling
 
@@ -78,7 +80,7 @@ These screenshots compare real repository revisions at the same 1280 × 720 desk
 
 ![After: persistent section menu above the profile](docs/images/navigation-after.png)
 
-Before source: [6b4d348](https://github.com/StevenKhuu91/front-end-projects/commit/6b4d348). After: the desktop accessibility revision documented below. This comparison records an implementation change, not a measured improvement from user testing.
+Before source: [6b4d348](https://github.com/StevenKhuu91/liam-ranvir-profile/commit/6b4d348). After: the live implementation at `ab1386c`, captured September 17, 2026. This comparison records an implementation change, not a measured improvement from user testing.
 
 ### Readability: separate headings from body copy
 
@@ -90,7 +92,7 @@ Before source: [6b4d348](https://github.com/StevenKhuu91/front-end-projects/comm
 
 ![After: distinct headings and readable descriptions](docs/images/readability-after.png)
 
-Before source: [a956555](https://github.com/StevenKhuu91/front-end-projects/commit/a956555). After: the desktop accessibility revision documented below. These spacing improvements were made in earlier revisions; this documentation pass records their effect.
+Before source: [a956555](https://github.com/StevenKhuu91/liam-ranvir-profile/commit/a956555). After: the live implementation at `ab1386c`, captured September 17, 2026. These spacing improvements were made in earlier revisions; this documentation pass records their effect.
 
 ### Focused desktop accessibility follow-up
 
@@ -121,8 +123,7 @@ A trial of standards-mode HTML shifted the skills subtitle by about nine pixels.
 ## Remaining work
 
 - Observe a few desktop users finding a section, reading an ability, and switching friends; use those observations to identify remaining friction.
-- Extend the focused keyboard and contrast review to additional desktop browsers and a screen reader; reassess decorative gradient text if the visual design is revisited.
-- Complete source attribution for external artwork and music, and document any verified reuse permissions.
+- Reassess decorative gradient text if the visual design is revisited.
 - Review legacy CSS and rendering-mode dependencies carefully before modernizing them.
 
 A responsive redesign remains outside the current scope.

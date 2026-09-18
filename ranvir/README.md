@@ -6,7 +6,9 @@ A desktop character-profile website created for an online roleplaying community,
 
 ![Ranvir profile with layered character artwork and persistent navigation](docs/images/desktop-profile.png)
 
-**[Live demo](https://stevenkhuu91.github.io/front-end-projects/ranvir/)** · **[Case study](CASE-STUDY.md)** · **[Source code](index.html)**
+**[Live demo](https://stevenkhuu91.github.io/liam-ranvir-profile/ranvir/)** · **[Case study](CASE-STUDY.md)** · **[Source code](index.html)**
+
+[Visual walkthrough](docs/WALKTHROUGH.md) · [Concise portfolio summary](../README.md)
 
 ## Key features
 
